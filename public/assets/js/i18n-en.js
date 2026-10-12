@@ -117,18 +117,12 @@ window.I18N_EN = {
 
   // Contact
   'contact.title': 'Tell us what you need',
-  'contact.sub': 'We will get back to you as soon as possible.',
+  'contact.sub': 'Call, message us on Zalo or send an email – we will get back to you as soon as possible.',
   'contact.phone': 'Phone / Zalo',
   'contact.address': 'Address',
+  'contact.zalo': 'Message us on Zalo',
+  'contact.taxId': 'Enterprise code (tax ID)',
   'contact.addressFull': '951 Ton Duc Thang Street, Quarter 1, Dong Xoai Ward, Dong Nai City, Vietnam',
-  'form.name': 'Full name',
-  'form.phone': 'Phone number',
-  'form.topic': 'You are interested in',
-  'form.other': 'Other',
-  'form.message': 'Message',
-  'form.note': 'The form opens your email app with your message pre-filled. See our <a href="#chinh-sach-bao-mat">Privacy Policy</a>.',
-  'form.error': 'Please fill in your name, phone number and message.',
-  'form.submit': 'Send request',
   'map.title': 'Map: 951 Ton Duc Thang, Dong Xoai, Dong Nai',
   'map.open': 'Open in Google Maps',
 
@@ -147,8 +141,5 @@ window.I18N_EN = {
   'js.title.chinh-sach-bao-mat': 'Privacy Policy – Vuong Gia Phu Solutions',
   'js.description': 'Vuong Gia Phu Solutions Company Limited – software development, technology consulting, digital transformation and applied AI; interior design, fit-out, equipment supply and installation, and solar power in Dong Nai, Vietnam.',
   'js.menu.open': 'Open menu',
-  'js.menu.close': 'Close menu',
-  'js.mail.name': 'Name',
-  'js.mail.phone': 'Phone',
-  'js.mail.topic': 'Interested in'
+  'js.menu.close': 'Close menu'
 };

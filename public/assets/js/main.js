@@ -27,10 +27,7 @@
     'js.title.chinh-sach-bao-mat': 'Chính sách bảo mật – Vuong Gia Phu Solutions',
     'js.description': metaDescription.getAttribute('content'),
     'js.menu.open': 'Mở menu',
-    'js.menu.close': 'Đóng menu',
-    'js.mail.name': 'Họ tên',
-    'js.mail.phone': 'Số điện thoại',
-    'js.mail.topic': 'Quan tâm'
+    'js.menu.close': 'Đóng menu'
   };
   var CANONICAL = { vi: canonical.href, en: canonical.href.replace(/\/?$/, '/') + '?lang=en' };
   var lang = 'vi';
@@ -205,27 +202,6 @@
       loadMap();
     }
   }
-
-  // ---------- Contact form -> mailto ----------
-  var form = document.getElementById('contact-form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = new FormData(form);
-    var name = (data.get('name') || '').trim();
-    var phone = (data.get('phone') || '').trim();
-    var topic = data.get('topic');
-    var message = (data.get('message') || '').trim();
-    var error = form.querySelector('.form-error');
-
-    if (!name || !phone || !message) { error.hidden = false; return; }
-    error.hidden = true;
-
-    var subject = '[Website] ' + topic + ' – ' + name;
-    var body = t('js.mail.name') + ': ' + name + '\n' + t('js.mail.phone') + ': ' + phone + '\n' +
-      t('js.mail.topic') + ': ' + topic + '\n\n' + message;
-    window.location.href = 'mailto:vuong@vuonggiaphu.com?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
-  });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

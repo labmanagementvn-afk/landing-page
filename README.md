@@ -20,7 +20,7 @@ Lựa chọn được ghi nhớ trên trình duyệt; link tiếng Anh để chi
 public/                 ← thư mục được deploy
   index.html            ← toàn bộ nội dung các tab
   assets/css/styles.css
-  assets/js/main.js     ← router theo hash, chuyển ngôn ngữ, menu mobile, form liên hệ (mailto)
+  assets/js/main.js     ← router theo hash, chuyển ngôn ngữ, menu mobile
   assets/js/i18n-en.js  ← toàn bộ bản dịch tiếng Anh
   assets/img/           ← logo, favicon, ảnh chia sẻ mạng xã hội
   404.html, robots.txt, sitemap.xml, site.webmanifest
@@ -85,5 +85,6 @@ Kết nối repo, để trống lệnh build, chọn thư mục xuất bản (ou
 - **Màu thương hiệu:** biến CSS ở đầu `public/assets/css/styles.css`.
 - **Tên miền khác `vuonggiaphu.com`:** thay trong `index.html` (canonical, hreflang, og:url, og:image, JSON-LD),
   `robots.txt` và `sitemap.xml`.
-- **Form liên hệ:** hiện mở ứng dụng email của khách với nội dung điền sẵn (không cần server).
-  Nếu muốn nhận form trực tiếp, có thể dùng dịch vụ miễn phí như Formspree hoặc Google Forms.
+- **Không thu thập thông tin khách hàng:** website không có biểu mẫu nhập liệu, giỏ hàng hay đặt hàng trực tuyến –
+  khách liên hệ qua điện thoại, Zalo, email. Nếu sau này thêm form, giỏ hàng hoặc đặt hàng/thanh toán trực tuyến,
+  cần cập nhật Chính sách bảo mật và kiểm tra nghĩa vụ thông báo theo Luật Thương mại điện tử 2025 / Nghị định 248/2026/NĐ-CP.
