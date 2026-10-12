@@ -7,9 +7,13 @@
   <meta name="description" content="Vuong Gia Phu Solutions Company Limited – phát triển phần mềm, tư vấn công nghệ, chuyển đổi số, ứng dụng AI; thiết kế, thi công nội thất và cung cấp, lắp đặt thiết bị nội thất, điện năng lượng mặt trời tại Đồng Nai.">
   <meta name="theme-color" content="#B5651D">
   <link rel="canonical" href="https://vuonggiaphu.com/">
+  <link rel="alternate" hreflang="vi" href="https://vuonggiaphu.com/">
+  <link rel="alternate" hreflang="en" href="https://vuonggiaphu.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://vuonggiaphu.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Vuong Gia Phu Solutions">
   <meta property="og:title" content="Vuong Gia Phu Solutions – Giải pháp Công nghệ &amp; Nội thất">
   <meta property="og:description" content="Phát triển phần mềm, chuyển đổi số, ứng dụng AI và giải pháp nội thất trọn gói: thiết kế, thi công, thiết bị bếp, phòng tắm, chiếu sáng, điện mặt trời.">
@@ -25,6 +29,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Pick the language before first paint to avoid a flash of Vietnamese text for English visitors -->
+  <script>
+    (function () {
+      var lang = new URLSearchParams(location.search).get('lang');
+      if (lang !== 'en' && lang !== 'vi') {
+        try { lang = localStorage.getItem('lang'); } catch (e) { lang = null; }
+      }
+      if (lang === 'en') {
+        var root = document.documentElement;
+        root.lang = 'en';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
 
   <script type="application/ld+json">
   {
@@ -74,11 +94,18 @@
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
   </svg>
 
-  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+  <!--
+    Translation: Vietnamese text lives in this file. English text lives in assets/js/i18n-en.js.
+    - data-i18n="key"            → element content is replaced with EN[key]
+    - data-i18n-attr="attr:key"  → attribute is replaced with EN[key] (several: "a:k1;b:k2")
+    - data-lang="vi|en"          → long-form blocks shown only in that language (privacy policy)
+  -->
+
+  <a class="skip-link" href="#main" data-i18n="skip">Bỏ qua đến nội dung chính</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#trang-chu" aria-label="Vuong Gia Phu Solutions – Trang chủ">
+      <a class="brand" href="#trang-chu" aria-label="Vuong Gia Phu Solutions – Trang chủ" data-i18n-attr="aria-label:brand.aria">
         <img src="assets/img/logo-icon.webp" width="48" height="50" alt="">
         <span class="brand-text">
           <span class="brand-name">VƯƠNG GIA PHÚ</span>
@@ -86,16 +113,23 @@
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Mở menu">
-        <svg class="icon"><use href="#i-menu"/></svg>
-      </button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Ngôn ngữ / Language">
+          <button type="button" data-set-lang="vi" lang="vi" aria-pressed="true" title="Tiếng Việt">VI</button>
+          <button type="button" data-set-lang="en" lang="en" aria-pressed="false" title="English">EN</button>
+        </div>
 
-      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
-        <a href="#trang-chu" data-route="trang-chu">Trang chủ</a>
-        <a href="#cong-nghe" data-route="cong-nghe">Giải pháp Công nghệ</a>
-        <a href="#noi-that" data-route="noi-that">Giải pháp Nội thất</a>
-        <a href="#chinh-sach-bao-mat" data-route="chinh-sach-bao-mat">Chính sách bảo mật</a>
-        <a href="#lien-he" class="btn btn-primary btn-sm nav-cta">Liên hệ</a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Mở menu">
+          <svg class="icon"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính" data-i18n-attr="aria-label:nav.aria">
+        <a href="#trang-chu" data-route="trang-chu" data-i18n="nav.home">Trang chủ</a>
+        <a href="#cong-nghe" data-route="cong-nghe" data-i18n="nav.tech">Giải pháp Công nghệ</a>
+        <a href="#noi-that" data-route="noi-that" data-i18n="nav.interior">Giải pháp Nội thất</a>
+        <a href="#chinh-sach-bao-mat" data-route="chinh-sach-bao-mat" data-i18n="nav.privacy">Chính sách bảo mật</a>
+        <a href="#lien-he" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.contact">Liên hệ</a>
       </nav>
     </div>
   </header>
@@ -108,11 +142,11 @@
         <div class="container hero-inner">
           <div class="hero-copy">
             <p class="eyebrow">Vuong Gia Phu Solutions Company Limited</p>
-            <h1 id="home-title">Kiến tạo <span class="text-grad">không gian sống</span> &amp; <span class="text-grad">nền tảng số</span> cho bạn</h1>
-            <p class="lead">Chúng tôi đồng hành cùng doanh nghiệp và gia đình với hai mảng giải pháp trọn gói: công nghệ – phần mềm – AI và thiết kế – thi công – thiết bị nội thất.</p>
+            <h1 id="home-title" data-i18n="home.title">Kiến tạo <span class="text-grad">không gian sống</span> &amp; <span class="text-grad">nền tảng số</span> cho bạn</h1>
+            <p class="lead" data-i18n="home.lead">Chúng tôi đồng hành cùng doanh nghiệp và gia đình với hai mảng giải pháp trọn gói: công nghệ – phần mềm – AI và thiết kế – thi công – thiết bị nội thất.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#cong-nghe">Giải pháp Công nghệ <svg class="icon"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn-outline" href="#noi-that">Giải pháp Nội thất <svg class="icon"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-primary" href="#cong-nghe"><span data-i18n="nav.tech">Giải pháp Công nghệ</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-outline" href="#noi-that"><span data-i18n="nav.interior">Giải pháp Nội thất</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
             </div>
           </div>
           <div class="hero-visual" aria-hidden="true">
@@ -125,27 +159,27 @@
       <div class="section">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Lĩnh vực hoạt động</p>
-            <h2>Hai thế mạnh, một cam kết chất lượng</h2>
+            <p class="eyebrow" data-i18n="home.fields.eyebrow">Lĩnh vực hoạt động</p>
+            <h2 data-i18n="home.fields.title">Hai thế mạnh, một cam kết chất lượng</h2>
           </div>
           <div class="pillars">
             <a class="pillar pillar-tech" href="#cong-nghe">
               <span class="pillar-icon"><svg class="icon"><use href="#i-code"/></svg></span>
-              <h3>Giải pháp Công nghệ</h3>
-              <p>Phát triển phần mềm theo yêu cầu, tư vấn giải pháp công nghệ, chuyển đổi số và ứng dụng trí tuệ nhân tạo (AI) vào vận hành doanh nghiệp.</p>
+              <h3 data-i18n="nav.tech">Giải pháp Công nghệ</h3>
+              <p data-i18n="home.tech.desc">Phát triển phần mềm theo yêu cầu, tư vấn giải pháp công nghệ, chuyển đổi số và ứng dụng trí tuệ nhân tạo (AI) vào vận hành doanh nghiệp.</p>
               <ul class="tags">
-                <li>Phần mềm</li><li>Chuyển đổi số</li><li>AI</li><li>Tư vấn</li>
+                <li data-i18n="tag.software">Phần mềm</li><li data-i18n="tag.digital">Chuyển đổi số</li><li>AI</li><li data-i18n="tag.consulting">Tư vấn</li>
               </ul>
-              <span class="pillar-link">Xem chi tiết <svg class="icon"><use href="#i-arrow"/></svg></span>
+              <span class="pillar-link"><span data-i18n="home.more">Xem chi tiết</span> <svg class="icon"><use href="#i-arrow"/></svg></span>
             </a>
             <a class="pillar pillar-interior" href="#noi-that">
               <span class="pillar-icon"><svg class="icon"><use href="#i-home"/></svg></span>
-              <h3>Giải pháp Nội thất</h3>
-              <p>Thiết kế, thi công nội thất trọn gói; cung cấp và lắp đặt thiết bị phòng tắm, thiết bị bếp, đèn chiếu sáng, đèn trang trí và điện năng lượng mặt trời.</p>
+              <h3 data-i18n="nav.interior">Giải pháp Nội thất</h3>
+              <p data-i18n="home.interior.desc">Thiết kế, thi công nội thất trọn gói; cung cấp và lắp đặt thiết bị phòng tắm, thiết bị bếp, đèn chiếu sáng, đèn trang trí và điện năng lượng mặt trời.</p>
               <ul class="tags">
-                <li>Thiết kế</li><li>Thi công</li><li>Thiết bị</li><li>Điện mặt trời</li>
+                <li data-i18n="tag.design">Thiết kế</li><li data-i18n="tag.build">Thi công</li><li data-i18n="tag.equipment">Thiết bị</li><li data-i18n="tag.solar">Điện mặt trời</li>
               </ul>
-              <span class="pillar-link">Xem chi tiết <svg class="icon"><use href="#i-arrow"/></svg></span>
+              <span class="pillar-link"><span data-i18n="home.more">Xem chi tiết</span> <svg class="icon"><use href="#i-arrow"/></svg></span>
             </a>
           </div>
         </div>
@@ -154,29 +188,29 @@
       <div class="section section-alt">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Vì sao chọn Vương Gia Phú</p>
-            <h2>Làm đúng, làm kỹ, đồng hành lâu dài</h2>
+            <p class="eyebrow" data-i18n="home.why.eyebrow">Vì sao chọn Vương Gia Phú</p>
+            <h2 data-i18n="home.why.title">Làm đúng, làm kỹ, đồng hành lâu dài</h2>
           </div>
           <div class="grid grid-4">
             <div class="feature">
               <svg class="icon icon-lg"><use href="#i-bulb"/></svg>
-              <h3>Giải pháp may đo</h3>
-              <p>Mỗi dự án bắt đầu từ việc lắng nghe nhu cầu thực tế, ngân sách và mục tiêu của bạn.</p>
+              <h3 data-i18n="home.why1.t">Giải pháp may đo</h3>
+              <p data-i18n="home.why1.d">Mỗi dự án bắt đầu từ việc lắng nghe nhu cầu thực tế, ngân sách và mục tiêu của bạn.</p>
             </div>
             <div class="feature">
               <svg class="icon icon-lg"><use href="#i-check"/></svg>
-              <h3>Minh bạch</h3>
-              <p>Báo giá rõ ràng, tiến độ cụ thể, cập nhật thường xuyên trong suốt quá trình thực hiện.</p>
+              <h3 data-i18n="home.why2.t">Minh bạch</h3>
+              <p data-i18n="home.why2.d">Báo giá rõ ràng, tiến độ cụ thể, cập nhật thường xuyên trong suốt quá trình thực hiện.</p>
             </div>
             <div class="feature">
               <svg class="icon icon-lg"><use href="#i-transform"/></svg>
-              <h3>Trọn gói một đầu mối</h3>
-              <p>Từ tư vấn, thiết kế đến triển khai, lắp đặt – bạn chỉ cần làm việc với một đội ngũ.</p>
+              <h3 data-i18n="home.why3.t">Trọn gói một đầu mối</h3>
+              <p data-i18n="home.why3.d">Từ tư vấn, thiết kế đến triển khai, lắp đặt – bạn chỉ cần làm việc với một đội ngũ.</p>
             </div>
             <div class="feature">
               <svg class="icon icon-lg"><use href="#i-shield"/></svg>
-              <h3>Hỗ trợ sau bàn giao</h3>
-              <p>Bảo hành, bảo trì và hỗ trợ kỹ thuật tận tâm để sản phẩm luôn vận hành ổn định.</p>
+              <h3 data-i18n="home.why4.t">Hỗ trợ sau bàn giao</h3>
+              <p data-i18n="home.why4.d">Bảo hành, bảo trì và hỗ trợ kỹ thuật tận tâm để sản phẩm luôn vận hành ổn định.</p>
             </div>
           </div>
         </div>
@@ -187,49 +221,49 @@
     <section class="view" data-view="cong-nghe" aria-labelledby="tech-title" hidden>
       <div class="page-hero page-hero-tech">
         <div class="container">
-          <p class="eyebrow">Giải pháp Công nghệ</p>
-          <h1 id="tech-title">Công nghệ đúng nhu cầu, <span class="text-grad">tăng trưởng</span> bền vững</h1>
-          <p class="lead">Từ ý tưởng đến sản phẩm vận hành thực tế: chúng tôi xây dựng phần mềm, tư vấn kiến trúc công nghệ, dẫn dắt chuyển đổi số và đưa AI vào công việc hằng ngày của doanh nghiệp.</p>
-          <a class="btn btn-primary" href="#lien-he">Nhận tư vấn miễn phí <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <p class="eyebrow" data-i18n="nav.tech">Giải pháp Công nghệ</p>
+          <h1 id="tech-title" data-i18n="tech.title">Công nghệ đúng nhu cầu, <span class="text-grad">tăng trưởng</span> bền vững</h1>
+          <p class="lead" data-i18n="tech.lead">Từ ý tưởng đến sản phẩm vận hành thực tế: chúng tôi xây dựng phần mềm, tư vấn kiến trúc công nghệ, dẫn dắt chuyển đổi số và đưa AI vào công việc hằng ngày của doanh nghiệp.</p>
+          <a class="btn btn-primary" href="#lien-he"><span data-i18n="tech.cta">Nhận tư vấn miễn phí</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
 
       <div class="section">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Dịch vụ</p>
-            <h2>Chúng tôi có thể giúp gì cho bạn?</h2>
+            <p class="eyebrow" data-i18n="tech.services.eyebrow">Dịch vụ</p>
+            <h2 data-i18n="tech.services.title">Chúng tôi có thể giúp gì cho bạn?</h2>
           </div>
           <div class="grid grid-3">
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-code"/></svg></span>
-              <h3>Phát triển phần mềm</h3>
-              <p>Website, ứng dụng di động, hệ thống quản trị nội bộ (ERP, CRM, quản lý bán hàng, kho, nhân sự) được thiết kế theo đúng quy trình của bạn.</p>
+              <h3 data-i18n="tech.s1.t">Phát triển phần mềm</h3>
+              <p data-i18n="tech.s1.d">Website, ứng dụng di động, hệ thống quản trị nội bộ (ERP, CRM, quản lý bán hàng, kho, nhân sự) được thiết kế theo đúng quy trình của bạn.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-bulb"/></svg></span>
-              <h3>Tư vấn giải pháp công nghệ</h3>
-              <p>Đánh giá hiện trạng, lựa chọn nền tảng, thiết kế kiến trúc hệ thống và lộ trình đầu tư công nghệ tối ưu chi phí.</p>
+              <h3 data-i18n="tech.s2.t">Tư vấn giải pháp công nghệ</h3>
+              <p data-i18n="tech.s2.d">Đánh giá hiện trạng, lựa chọn nền tảng, thiết kế kiến trúc hệ thống và lộ trình đầu tư công nghệ tối ưu chi phí.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-transform"/></svg></span>
-              <h3>Chuyển đổi số</h3>
-              <p>Số hóa quy trình, tự động hóa nghiệp vụ, xây dựng dữ liệu tập trung và báo cáo quản trị theo thời gian thực.</p>
+              <h3 data-i18n="tag.digital">Chuyển đổi số</h3>
+              <p data-i18n="tech.s3.d">Số hóa quy trình, tự động hóa nghiệp vụ, xây dựng dữ liệu tập trung và báo cáo quản trị theo thời gian thực.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-ai"/></svg></span>
-              <h3>Ứng dụng AI</h3>
-              <p>Chatbot chăm sóc khách hàng, trợ lý AI nội bộ, xử lý tài liệu, phân tích dữ liệu và tự động hóa công việc lặp lại bằng trí tuệ nhân tạo.</p>
+              <h3 data-i18n="tech.s4.t">Ứng dụng AI</h3>
+              <p data-i18n="tech.s4.d">Chatbot chăm sóc khách hàng, trợ lý AI nội bộ, xử lý tài liệu, phân tích dữ liệu và tự động hóa công việc lặp lại bằng trí tuệ nhân tạo.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-cloud"/></svg></span>
-              <h3>Cloud &amp; tích hợp hệ thống</h3>
-              <p>Triển khai hạ tầng đám mây, tích hợp API giữa các phần mềm, cổng thanh toán, hóa đơn điện tử và nền tảng thương mại điện tử.</p>
+              <h3 data-i18n="tech.s5.t">Cloud &amp; tích hợp hệ thống</h3>
+              <p data-i18n="tech.s5.d">Triển khai hạ tầng đám mây, tích hợp API giữa các phần mềm, cổng thanh toán, hóa đơn điện tử và nền tảng thương mại điện tử.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
-              <h3>Bảo trì &amp; hỗ trợ vận hành</h3>
-              <p>Giám sát, sao lưu, cập nhật bảo mật và nâng cấp tính năng định kỳ để hệ thống luôn ổn định, an toàn.</p>
+              <h3 data-i18n="tech.s6.t">Bảo trì &amp; hỗ trợ vận hành</h3>
+              <p data-i18n="tech.s6.d">Giám sát, sao lưu, cập nhật bảo mật và nâng cấp tính năng định kỳ để hệ thống luôn ổn định, an toàn.</p>
             </article>
           </div>
         </div>
@@ -238,15 +272,15 @@
       <div class="section section-alt">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Quy trình làm việc</p>
-            <h2>5 bước rõ ràng từ ý tưởng đến vận hành</h2>
+            <p class="eyebrow" data-i18n="tech.process.eyebrow">Quy trình làm việc</p>
+            <h2 data-i18n="tech.process.title">5 bước rõ ràng từ ý tưởng đến vận hành</h2>
           </div>
           <ol class="steps">
-            <li><h3>Tìm hiểu nhu cầu</h3><p>Trao đổi mục tiêu, hiện trạng và ngân sách.</p></li>
-            <li><h3>Đề xuất giải pháp</h3><p>Phạm vi, công nghệ, tiến độ và báo giá chi tiết.</p></li>
-            <li><h3>Phát triển</h3><p>Làm việc theo từng giai đoạn, demo định kỳ.</p></li>
-            <li><h3>Triển khai</h3><p>Kiểm thử, chuyển giao dữ liệu, đào tạo người dùng.</p></li>
-            <li><h3>Vận hành &amp; hỗ trợ</h3><p>Bảo hành, bảo trì và cải tiến liên tục.</p></li>
+            <li><h3 data-i18n="tech.p1.t">Tìm hiểu nhu cầu</h3><p data-i18n="tech.p1.d">Trao đổi mục tiêu, hiện trạng và ngân sách.</p></li>
+            <li><h3 data-i18n="tech.p2.t">Đề xuất giải pháp</h3><p data-i18n="tech.p2.d">Phạm vi, công nghệ, tiến độ và báo giá chi tiết.</p></li>
+            <li><h3 data-i18n="tech.p3.t">Phát triển</h3><p data-i18n="tech.p3.d">Làm việc theo từng giai đoạn, demo định kỳ.</p></li>
+            <li><h3 data-i18n="tech.p4.t">Triển khai</h3><p data-i18n="tech.p4.d">Kiểm thử, chuyển giao dữ liệu, đào tạo người dùng.</p></li>
+            <li><h3 data-i18n="tech.p5.t">Vận hành &amp; hỗ trợ</h3><p data-i18n="tech.p5.d">Bảo hành, bảo trì và cải tiến liên tục.</p></li>
           </ol>
         </div>
       </div>
@@ -255,10 +289,10 @@
         <div class="container">
           <div class="cta-band">
             <div>
-              <h2>Bạn đang có ý tưởng hoặc bài toán cần giải?</h2>
-              <p>Hãy chia sẻ với chúng tôi – buổi tư vấn đầu tiên hoàn toàn miễn phí.</p>
+              <h2 data-i18n="tech.band.title">Bạn đang có ý tưởng hoặc bài toán cần giải?</h2>
+              <p data-i18n="tech.band.text">Hãy chia sẻ với chúng tôi – buổi tư vấn đầu tiên hoàn toàn miễn phí.</p>
             </div>
-            <a class="btn btn-light" href="#lien-he">Liên hệ ngay <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-light" href="#lien-he"><span data-i18n="cta.contactNow">Liên hệ ngay</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -268,59 +302,59 @@
     <section class="view" data-view="noi-that" aria-labelledby="interior-title" hidden>
       <div class="page-hero page-hero-interior">
         <div class="container">
-          <p class="eyebrow">Giải pháp Nội thất</p>
-          <h1 id="interior-title">Không gian <span class="text-grad">đẹp</span>, tiện nghi &amp; <span class="text-grad">tiết kiệm</span> năng lượng</h1>
-          <p class="lead">Thiết kế và thi công nội thất trọn gói, cung cấp và lắp đặt thiết bị chính hãng – từ phòng tắm, căn bếp, hệ thống chiếu sáng đến điện năng lượng mặt trời.</p>
-          <a class="btn btn-primary" href="#lien-he">Đặt lịch khảo sát <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <p class="eyebrow" data-i18n="nav.interior">Giải pháp Nội thất</p>
+          <h1 id="interior-title" data-i18n="int.title">Không gian <span class="text-grad">đẹp</span>, tiện nghi &amp; <span class="text-grad">tiết kiệm</span> năng lượng</h1>
+          <p class="lead" data-i18n="int.lead">Thiết kế và thi công nội thất trọn gói, cung cấp và lắp đặt thiết bị chính hãng – từ phòng tắm, căn bếp, hệ thống chiếu sáng đến điện năng lượng mặt trời.</p>
+          <a class="btn btn-primary" href="#lien-he"><span data-i18n="int.cta">Đặt lịch khảo sát</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
 
       <div class="section">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Dịch vụ &amp; sản phẩm</p>
-            <h2>Trọn gói cho ngôi nhà và công trình của bạn</h2>
+            <p class="eyebrow" data-i18n="int.services.eyebrow">Dịch vụ &amp; sản phẩm</p>
+            <h2 data-i18n="int.services.title">Trọn gói cho ngôi nhà và công trình của bạn</h2>
           </div>
           <div class="grid grid-4">
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-ruler"/></svg></span>
-              <h3>Thiết kế nội thất</h3>
-              <p>Nhà ở, căn hộ, văn phòng, showroom, nhà hàng – phương án 2D/3D sát thực tế, phù hợp phong cách và ngân sách.</p>
+              <h3 data-i18n="int.s1.t">Thiết kế nội thất</h3>
+              <p data-i18n="int.s1.d">Nhà ở, căn hộ, văn phòng, showroom, nhà hàng – phương án 2D/3D sát thực tế, phù hợp phong cách và ngân sách.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-hammer"/></svg></span>
-              <h3>Thi công nội thất</h3>
-              <p>Thi công hoàn thiện, đồ gỗ, trần, vách, sàn với đội thợ lành nghề, giám sát chặt chẽ, đúng tiến độ.</p>
+              <h3 data-i18n="int.s2.t">Thi công nội thất</h3>
+              <p data-i18n="int.s2.d">Thi công hoàn thiện, đồ gỗ, trần, vách, sàn với đội thợ lành nghề, giám sát chặt chẽ, đúng tiến độ.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-bath"/></svg></span>
-              <h3>Thiết bị phòng tắm</h3>
-              <p>Bồn cầu, lavabo, sen vòi, bồn tắm, gương, phụ kiện – đa dạng thương hiệu, lắp đặt tận nơi.</p>
+              <h3 data-i18n="int.s3.t">Thiết bị phòng tắm</h3>
+              <p data-i18n="int.s3.d">Bồn cầu, lavabo, sen vòi, bồn tắm, gương, phụ kiện – đa dạng thương hiệu, lắp đặt tận nơi.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-kitchen"/></svg></span>
-              <h3>Thiết bị bếp</h3>
-              <p>Tủ bếp, bếp từ, máy hút mùi, chậu rửa, lò nướng, máy rửa bát – đồng bộ, an toàn, tiện dụng.</p>
+              <h3 data-i18n="int.s4.t">Thiết bị bếp</h3>
+              <p data-i18n="int.s4.d">Tủ bếp, bếp từ, máy hút mùi, chậu rửa, lò nướng, máy rửa bát – đồng bộ, an toàn, tiện dụng.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-lamp"/></svg></span>
-              <h3>Đèn chiếu sáng</h3>
-              <p>Giải pháp chiếu sáng LED tiết kiệm điện cho nhà ở, văn phòng, nhà xưởng và cảnh quan.</p>
+              <h3 data-i18n="int.s5.t">Đèn chiếu sáng</h3>
+              <p data-i18n="int.s5.d">Giải pháp chiếu sáng LED tiết kiệm điện cho nhà ở, văn phòng, nhà xưởng và cảnh quan.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-chandelier"/></svg></span>
-              <h3>Đèn trang trí</h3>
-              <p>Đèn chùm, đèn thả, đèn tường, đèn hắt – tạo điểm nhấn sang trọng cho không gian.</p>
+              <h3 data-i18n="int.s6.t">Đèn trang trí</h3>
+              <p data-i18n="int.s6.d">Đèn chùm, đèn thả, đèn tường, đèn hắt – tạo điểm nhấn sang trọng cho không gian.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-solar"/></svg></span>
-              <h3>Điện năng lượng mặt trời</h3>
-              <p>Khảo sát, thiết kế, lắp đặt hệ thống điện mặt trời áp mái hòa lưới, có lưu trữ cho gia đình và doanh nghiệp.</p>
+              <h3 data-i18n="int.s7.t">Điện năng lượng mặt trời</h3>
+              <p data-i18n="int.s7.d">Khảo sát, thiết kế, lắp đặt hệ thống điện mặt trời áp mái hòa lưới, có lưu trữ cho gia đình và doanh nghiệp.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon"><use href="#i-home"/></svg></span>
-              <h3>Nhà thông minh</h3>
-              <p>Kết hợp thế mạnh công nghệ: điều khiển chiếu sáng, rèm, camera, khóa cửa thông minh qua điện thoại.</p>
+              <h3 data-i18n="int.s8.t">Nhà thông minh</h3>
+              <p data-i18n="int.s8.d">Kết hợp thế mạnh công nghệ: điều khiển chiếu sáng, rèm, camera, khóa cửa thông minh qua điện thoại.</p>
             </article>
           </div>
         </div>
@@ -329,15 +363,15 @@
       <div class="section section-alt">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Quy trình thực hiện</p>
-            <h2>Rõ ràng từ khảo sát đến bàn giao</h2>
+            <p class="eyebrow" data-i18n="int.process.eyebrow">Quy trình thực hiện</p>
+            <h2 data-i18n="int.process.title">Rõ ràng từ khảo sát đến bàn giao</h2>
           </div>
           <ol class="steps">
-            <li><h3>Khảo sát</h3><p>Đo đạc hiện trạng, ghi nhận nhu cầu và phong cách.</p></li>
-            <li><h3>Thiết kế</h3><p>Lên phương án 2D/3D, chỉnh sửa đến khi bạn hài lòng.</p></li>
-            <li><h3>Báo giá</h3><p>Dự toán chi tiết vật tư, thiết bị và nhân công.</p></li>
-            <li><h3>Thi công &amp; lắp đặt</h3><p>Đúng thiết kế, đúng tiến độ, có giám sát.</p></li>
-            <li><h3>Bàn giao &amp; bảo hành</h3><p>Nghiệm thu, hướng dẫn sử dụng, bảo hành dài hạn.</p></li>
+            <li><h3 data-i18n="int.p1.t">Khảo sát</h3><p data-i18n="int.p1.d">Đo đạc hiện trạng, ghi nhận nhu cầu và phong cách.</p></li>
+            <li><h3 data-i18n="int.p2.t">Thiết kế</h3><p data-i18n="int.p2.d">Lên phương án 2D/3D, chỉnh sửa đến khi bạn hài lòng.</p></li>
+            <li><h3 data-i18n="int.p3.t">Báo giá</h3><p data-i18n="int.p3.d">Dự toán chi tiết vật tư, thiết bị và nhân công.</p></li>
+            <li><h3 data-i18n="int.p4.t">Thi công &amp; lắp đặt</h3><p data-i18n="int.p4.d">Đúng thiết kế, đúng tiến độ, có giám sát.</p></li>
+            <li><h3 data-i18n="int.p5.t">Bàn giao &amp; bảo hành</h3><p data-i18n="int.p5.d">Nghiệm thu, hướng dẫn sử dụng, bảo hành dài hạn.</p></li>
           </ol>
         </div>
       </div>
@@ -346,10 +380,10 @@
         <div class="container">
           <div class="cta-band">
             <div>
-              <h2>Sẵn sàng làm mới không gian của bạn?</h2>
-              <p>Liên hệ để được khảo sát và tư vấn phương án phù hợp.</p>
+              <h2 data-i18n="int.band.title">Sẵn sàng làm mới không gian của bạn?</h2>
+              <p data-i18n="int.band.text">Liên hệ để được khảo sát và tư vấn phương án phù hợp.</p>
             </div>
-            <a class="btn btn-light" href="#lien-he">Liên hệ ngay <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-light" href="#lien-he"><span data-i18n="cta.contactNow">Liên hệ ngay</span> <svg class="icon"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -359,14 +393,15 @@
     <section class="view" data-view="chinh-sach-bao-mat" aria-labelledby="privacy-title" hidden>
       <div class="page-hero page-hero-plain">
         <div class="container">
-          <p class="eyebrow">Pháp lý</p>
-          <h1 id="privacy-title">Chính sách bảo mật</h1>
-          <p class="lead">Cập nhật lần cuối: 12/10/2026</p>
+          <p class="eyebrow" data-i18n="pp.eyebrow">Pháp lý</p>
+          <h1 id="privacy-title" data-i18n="nav.privacy">Chính sách bảo mật</h1>
+          <p class="lead" data-i18n="pp.updated">Cập nhật lần cuối: 12/10/2026</p>
         </div>
       </div>
 
       <div class="section">
-        <div class="container privacy">
+        <!-- Vietnamese version -->
+        <div class="container privacy" data-lang="vi" lang="vi">
           <nav class="toc" aria-label="Mục lục chính sách">
             <p class="toc-title">Mục lục</p>
             <ol>
@@ -400,7 +435,7 @@
               <li>Thông tin thanh toán, xuất hóa đơn khi phát sinh giao dịch.</li>
             </ul>
             <p><strong>b) Dữ liệu kỹ thuật tự động</strong> khi bạn truy cập website, như địa chỉ IP, loại trình duyệt, thiết bị, thời gian truy cập. Các dữ liệu này chủ yếu được ghi nhận bởi nhà cung cấp dịch vụ lưu trữ website (hosting) phục vụ vận hành và bảo mật.</p>
-            <p>Website này <strong>không sử dụng cookie quảng cáo</strong> và không yêu cầu bạn tạo tài khoản. Chúng tôi <strong>không chủ động thu thập dữ liệu cá nhân nhạy cảm</strong> (như tình trạng sức khỏe, tôn giáo, dữ liệu sinh trắc học…) trừ khi thật sự cần thiết cho việc thực hiện hợp đồng và có sự đồng ý rõ ràng của bạn.</p>
+            <p>Website này <strong>không sử dụng cookie quảng cáo</strong> và không yêu cầu bạn tạo tài khoản. Lựa chọn ngôn ngữ của bạn được lưu ngay trên trình duyệt (localStorage) và không gửi về máy chủ. Chúng tôi <strong>không chủ động thu thập dữ liệu cá nhân nhạy cảm</strong> (như tình trạng sức khỏe, tôn giáo, dữ liệu sinh trắc học…) trừ khi thật sự cần thiết cho việc thực hiện hợp đồng và có sự đồng ý rõ ràng của bạn.</p>
 
             <h2 id="pp-3">3. Mục đích xử lý dữ liệu</h2>
             <ul>
@@ -466,6 +501,108 @@
               Điện thoại: <a href="tel:+84963345099">0963.345.099</a></p>
           </article>
         </div>
+
+        <!-- English version -->
+        <div class="container privacy" data-lang="en" lang="en">
+          <nav class="toc" aria-label="Policy contents">
+            <p class="toc-title">Contents</p>
+            <ol>
+              <li><a href="#pp-en-1">Introduction</a></li>
+              <li><a href="#pp-en-2">Data we collect</a></li>
+              <li><a href="#pp-en-3">How we use your data</a></li>
+              <li><a href="#pp-en-4">Legal basis</a></li>
+              <li><a href="#pp-en-5">Sharing your data</a></li>
+              <li><a href="#pp-en-6">Third-party services</a></li>
+              <li><a href="#pp-en-7">Retention</a></li>
+              <li><a href="#pp-en-8">Data security</a></li>
+              <li><a href="#pp-en-9">Your rights</a></li>
+              <li><a href="#pp-en-10">Children's data</a></li>
+              <li><a href="#pp-en-11">Changes to this policy</a></li>
+              <li><a href="#pp-en-12">Contact</a></li>
+            </ol>
+          </nav>
+
+          <article class="prose">
+            <h2 id="pp-en-1">1. Introduction</h2>
+            <p><strong>Vuong Gia Phu Solutions Company Limited</strong> (“<strong>Vuong Gia Phu</strong>”, “<strong>we</strong>”, “<strong>us</strong>”) respects and is committed to protecting the personal data of our customers, partners and website visitors (“<strong>you</strong>”). This policy explains what data we collect, why we use it, who we share it with, how long we keep it and what rights you have over it.</p>
+            <p>This policy applies to this website and to our consulting, services and products in the technology and interior sectors. It is written in accordance with Vietnamese personal data protection law, including the Law on Personal Data Protection, Decree No. 13/2023/ND-CP and related guiding, amending and supplementing regulations. If the English and Vietnamese versions differ, the Vietnamese version prevails.</p>
+
+            <h2 id="pp-en-2">2. Data we collect</h2>
+            <p><strong>a) Data you provide</strong> when you contact us by email, phone, Zalo or the contact form, or when you sign a contract:</p>
+            <ul>
+              <li>Full name, phone number, email address;</li>
+              <li>Company name, job title, tax code (for business customers);</li>
+              <li>Project address, site photos, drawings and design requirements (for interior services);</li>
+              <li>Requirement descriptions, business documents, sample data (for technology services);</li>
+              <li>Payment and invoicing details when a transaction takes place.</li>
+            </ul>
+            <p><strong>b) Technical data collected automatically</strong> when you visit the website, such as IP address, browser type, device and time of visit. This data is mainly recorded by our website hosting provider for operation and security purposes.</p>
+            <p>This website <strong>does not use advertising cookies</strong> and does not require you to create an account. Your language choice is stored only in your browser (localStorage) and is never sent to a server. We <strong>do not intentionally collect sensitive personal data</strong> (such as health, religion or biometric data) unless it is strictly necessary to perform a contract and you have given explicit consent.</p>
+
+            <h2 id="pp-en-3">3. How we use your data</h2>
+            <ul>
+              <li>To respond to enquiries and provide consultations, site surveys and quotations;</li>
+              <li>To enter into and perform contracts: design, construction, supply and installation of equipment, software development and operation;</li>
+              <li>To provide warranty, maintenance, technical support and customer care;</li>
+              <li>To issue invoices, process payments and meet our accounting and tax obligations;</li>
+              <li>To send information about products, services and offers – <em>only with your consent</em>, which you may withdraw at any time;</li>
+              <li>To operate, secure and improve the website.</li>
+            </ul>
+            <p>We <strong>do not sell or rent</strong> your personal data to anyone.</p>
+
+            <h2 id="pp-en-4">4. Legal basis</h2>
+            <p>We only process personal data on one of the following bases: (i) your consent; (ii) to perform a contract to which you are a party, or to take steps at your request before entering into a contract; (iii) to comply with a legal obligation; or (iv) other cases permitted by law. When you contact us and provide your information, you consent to us processing that data in order to respond to your request.</p>
+
+            <h2 id="pp-en-5">5. Sharing your data</h2>
+            <p>Your data is shared only to the extent necessary with:</p>
+            <ul>
+              <li>Vuong Gia Phu staff who need it to do their work;</li>
+              <li>Construction partners, equipment suppliers, delivery, installation and authorised warranty providers – to fulfil your order or service;</li>
+              <li>Infrastructure providers (email, storage, cloud computing) – under confidentiality agreements;</li>
+              <li>Competent government authorities when required by law.</li>
+            </ul>
+            <p>All recipients are required to keep the data confidential and use it only for the purpose it was shared for.</p>
+
+            <h2 id="pp-en-6">6. Third-party services on this website</h2>
+            <p>The website uses some third-party services that may record technical data under their own policies:</p>
+            <ul>
+              <li><strong>Google Maps</strong> (office location map) and <strong>Google Fonts</strong> (typography);</li>
+              <li>Website hosting platforms (for example GitHub Pages, Firebase Hosting or equivalent);</li>
+              <li>Links to <strong>Zalo</strong>, your email app or phone when you choose to click them.</li>
+            </ul>
+            <p>We recommend that you read the privacy policies of these providers.</p>
+
+            <h2 id="pp-en-7">7. Retention</h2>
+            <p>We keep data only as long as needed for the purposes in Section 3: contact and quotation data that does not lead to a contract is kept for up to 24 months; contracts, invoices and records are kept for the periods required by accounting and tax law and for the duration of any warranty. After that, data is securely deleted or anonymised.</p>
+
+            <h2 id="pp-en-8">8. Data security</h2>
+            <p>We apply appropriate organisational and technical measures such as HTTPS encryption, least-privilege access control, multi-factor authentication for administrator accounts, regular backups and confidentiality commitments from staff and partners. In the event of a personal data breach, we will notify the competent authority and affected individuals as required by law.</p>
+
+            <h2 id="pp-en-9">9. Your rights</h2>
+            <p>Under applicable law, you have the right to:</p>
+            <ul>
+              <li>Be informed about the processing of your personal data;</li>
+              <li>Give, refuse or withdraw consent;</li>
+              <li>Access, view and correct your data, or ask us to correct it;</li>
+              <li>Request deletion, restriction of processing, or object to processing;</li>
+              <li>Request a copy of your personal data;</li>
+              <li>File complaints, denunciations or lawsuits and claim compensation for damages as provided by law.</li>
+            </ul>
+            <p>To exercise these rights, please email <a href="mailto:vuong@vuonggiaphu.com">vuong@vuonggiaphu.com</a>. We will verify your identity and respond within the statutory time limit. Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal.</p>
+
+            <h2 id="pp-en-10">10. Children's data</h2>
+            <p>Our services are intended for adults and businesses. We do not knowingly collect personal data from children under 16. If we discover that we have collected such data without the consent of a parent or guardian, we will delete it.</p>
+
+            <h2 id="pp-en-11">11. Changes to this policy</h2>
+            <p>We may update this policy to reflect changes in our services or in the law. The new version will be published on this page with its update date. For significant changes, we will give clear notice on the website or through the contact details you have provided.</p>
+
+            <h2 id="pp-en-12">12. Contact</h2>
+            <p><strong>Vuong Gia Phu Solutions Company Limited</strong><br>
+              Address: 951 Ton Duc Thang Street, Quarter 1, Dong Xoai Ward, Dong Nai City, Vietnam<br>
+              Email: <a href="mailto:vuong@vuonggiaphu.com">vuong@vuonggiaphu.com</a><br>
+              Phone: <a href="tel:+84963345099">+84 963 345 099</a></p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -473,16 +610,16 @@
     <section class="section contact" id="lien-he" aria-labelledby="contact-title" tabindex="-1">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Liên hệ</p>
-          <h2 id="contact-title">Hãy cho chúng tôi biết nhu cầu của bạn</h2>
-          <p>Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+          <p class="eyebrow" data-i18n="nav.contact">Liên hệ</p>
+          <h2 id="contact-title" data-i18n="contact.title">Hãy cho chúng tôi biết nhu cầu của bạn</h2>
+          <p data-i18n="contact.sub">Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info">
             <a class="contact-item" href="tel:+84963345099">
               <span class="contact-icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-              <span><small>Điện thoại / Zalo</small><strong>0963.345.099</strong></span>
+              <span><small data-i18n="contact.phone">Điện thoại / Zalo</small><strong>0963.345.099</strong></span>
             </a>
             <a class="contact-item" href="mailto:vuong@vuonggiaphu.com">
               <span class="contact-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
@@ -490,35 +627,36 @@
             </a>
             <a class="contact-item" href="https://maps.app.goo.gl/VMHAGvCfEx3ixXCLA" target="_blank" rel="noopener">
               <span class="contact-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
-              <span><small>Địa chỉ</small><strong>951 Tôn Đức Thắng, Khu phố 1, phường Đồng Xoài, thành phố Đồng Nai, Việt Nam</strong></span>
+              <span><small data-i18n="contact.address">Địa chỉ</small><strong data-i18n="contact.addressFull">951 Tôn Đức Thắng, Khu phố 1, phường Đồng Xoài, thành phố Đồng Nai, Việt Nam</strong></span>
             </a>
 
             <form class="contact-form" id="contact-form" novalidate>
               <div class="field-row">
-                <label>Họ tên<input name="name" type="text" autocomplete="name" required></label>
-                <label>Số điện thoại<input name="phone" type="tel" autocomplete="tel" required></label>
+                <label><span data-i18n="form.name">Họ tên</span><input name="name" type="text" autocomplete="name" required></label>
+                <label><span data-i18n="form.phone">Số điện thoại</span><input name="phone" type="tel" autocomplete="tel" required></label>
               </div>
-              <label>Bạn quan tâm đến
+              <label><span data-i18n="form.topic">Bạn quan tâm đến</span>
                 <select name="topic">
-                  <option>Giải pháp Công nghệ</option>
-                  <option>Giải pháp Nội thất</option>
-                  <option>Khác</option>
+                  <option data-i18n="nav.tech">Giải pháp Công nghệ</option>
+                  <option data-i18n="nav.interior">Giải pháp Nội thất</option>
+                  <option data-i18n="form.other">Khác</option>
                 </select>
               </label>
-              <label>Nội dung<textarea name="message" rows="4" required></textarea></label>
-              <p class="form-note">Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn. Xem <a href="#chinh-sach-bao-mat">Chính sách bảo mật</a>.</p>
-              <p class="form-error" role="alert" hidden>Vui lòng điền họ tên, số điện thoại và nội dung.</p>
-              <button class="btn btn-primary" type="submit">Gửi yêu cầu <svg class="icon"><use href="#i-arrow"/></svg></button>
+              <label><span data-i18n="form.message">Nội dung</span><textarea name="message" rows="4" required></textarea></label>
+              <p class="form-note" data-i18n="form.note">Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn. Xem <a href="#chinh-sach-bao-mat">Chính sách bảo mật</a>.</p>
+              <p class="form-error" role="alert" hidden data-i18n="form.error">Vui lòng điền họ tên, số điện thoại và nội dung.</p>
+              <button class="btn btn-primary" type="submit"><span data-i18n="form.submit">Gửi yêu cầu</span> <svg class="icon"><use href="#i-arrow"/></svg></button>
             </form>
           </div>
 
           <div class="map">
             <iframe
               title="Bản đồ: 951 Tôn Đức Thắng, Đồng Xoài, Đồng Nai"
+              data-i18n-attr="title:map.title"
               data-src="https://maps.google.com/maps?q=951%20T%C3%B4n%20%C4%90%E1%BB%A9c%20Th%E1%BA%AFng%2C%20%C4%90%E1%BB%93ng%20Xo%C3%A0i%2C%20%C4%90%E1%BB%93ng%20Nai%2C%20Vi%E1%BB%87t%20Nam&z=16&output=embed"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <a class="btn btn-outline map-btn" href="https://maps.app.goo.gl/VMHAGvCfEx3ixXCLA" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-pin"/></svg> Mở trên Google Maps
+              <svg class="icon"><use href="#i-pin"/></svg> <span data-i18n="map.open">Mở trên Google Maps</span>
             </a>
           </div>
         </div>
@@ -532,19 +670,19 @@
         <img src="assets/img/logo-white.webp" width="60" height="62" alt="">
         <div>
           <p class="footer-name">Vuong Gia Phu Solutions Company Limited</p>
-          <p>Giải pháp Công nghệ &amp; Nội thất</p>
+          <p data-i18n="footer.tagline">Giải pháp Công nghệ &amp; Nội thất</p>
         </div>
       </div>
-      <nav class="footer-links" aria-label="Liên kết chân trang">
-        <a href="#cong-nghe">Giải pháp Công nghệ</a>
-        <a href="#noi-that">Giải pháp Nội thất</a>
-        <a href="#chinh-sach-bao-mat">Chính sách bảo mật</a>
-        <a href="#lien-he">Liên hệ</a>
+      <nav class="footer-links" aria-label="Liên kết chân trang" data-i18n-attr="aria-label:footer.aria">
+        <a href="#cong-nghe" data-i18n="nav.tech">Giải pháp Công nghệ</a>
+        <a href="#noi-that" data-i18n="nav.interior">Giải pháp Nội thất</a>
+        <a href="#chinh-sach-bao-mat" data-i18n="nav.privacy">Chính sách bảo mật</a>
+        <a href="#lien-he" data-i18n="nav.contact">Liên hệ</a>
       </nav>
       <div class="footer-contact">
         <a href="tel:+84963345099">0963.345.099</a>
         <a href="mailto:vuong@vuonggiaphu.com">vuong@vuonggiaphu.com</a>
-        <span>951 Tôn Đức Thắng, KP 1, P. Đồng Xoài, TP. Đồng Nai</span>
+        <span data-i18n="footer.address">951 Tôn Đức Thắng, KP 1, P. Đồng Xoài, TP. Đồng Nai</span>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -553,17 +691,18 @@
   </footer>
 
   <div class="floating">
-    <a class="fab fab-zalo" href="https://zalo.me/0963345099" target="_blank" rel="noopener" aria-label="Nhắn Zalo">
+    <a class="fab fab-zalo" href="https://zalo.me/0963345099" target="_blank" rel="noopener" aria-label="Nhắn Zalo" data-i18n-attr="aria-label:fab.zalo">
       <svg class="icon"><use href="#i-chat"/></svg>
     </a>
-    <a class="fab fab-phone" href="tel:+84963345099" aria-label="Gọi 0963.345.099">
+    <a class="fab fab-phone" href="tel:+84963345099" aria-label="Gọi 0963.345.099" data-i18n-attr="aria-label:fab.phone">
       <svg class="icon"><use href="#i-phone"/></svg>
     </a>
-    <button class="fab fab-top" type="button" aria-label="Lên đầu trang" hidden>
+    <button class="fab fab-top" type="button" aria-label="Lên đầu trang" data-i18n-attr="aria-label:fab.top" hidden>
       <svg class="icon"><use href="#i-up"/></svg>
     </button>
   </div>
 
+  <script src="assets/js/i18n-en.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

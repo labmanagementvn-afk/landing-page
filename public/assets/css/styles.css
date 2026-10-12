@@ -48,6 +48,12 @@ h3 { font-size: 1.125rem; font-weight: 700; }
 p { margin: 0 0 1em; }
 [hidden] { display: none !important; }
 
+/* Language: long-form blocks exist in both languages, only the active one is shown */
+html[lang="en"] [data-lang="vi"],
+html:not([lang="en"]) [data-lang="en"] { display: none !important; }
+/* Set by the inline head script while English text is being applied (avoids a flash of Vietnamese) */
+html.i18n-pending body { visibility: hidden; }
+
 .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 .icon { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 .icon-lg { width: 2.25rem; height: 2.25rem; }
@@ -96,15 +102,26 @@ p { margin: 0 0 1em; }
 .site-nav { display: flex; align-items: center; gap: 4px; }
 .site-nav a:not(.btn) {
   padding: 8px 14px; border-radius: 999px; color: var(--ink-soft); font-weight: 500; font-size: .95rem;
-  transition: background .2s, color .2s;
+  white-space: nowrap; transition: background .2s, color .2s;
 }
 .site-nav a:not(.btn):hover { color: var(--copper-dark); background: var(--bg-alt); }
 .site-nav a.active { color: var(--copper-dark); background: #f6ebe0; font-weight: 600; }
 .nav-cta { margin-left: 8px; }
+
+.header-actions { order: 2; display: flex; align-items: center; gap: 8px; }
+.site-nav { order: 1; margin-left: auto; }
+.lang-switch { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--line); }
+.lang-switch button {
+  font: inherit; font-size: .78rem; font-weight: 700; letter-spacing: .04em;
+  min-width: 38px; padding: 6px 10px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--muted); cursor: pointer; transition: background .2s, color .2s;
+}
+.lang-switch button:hover { color: var(--copper-dark); }
+.lang-switch button[aria-pressed="true"] { background: var(--grad); color: #fff; box-shadow: 0 2px 8px rgba(168, 90, 0, .3); }
 .nav-toggle { display: none; background: none; border: 0; padding: 8px; color: var(--ink); cursor: pointer; border-radius: 8px; }
 .nav-toggle .icon { width: 28px; height: 28px; }
 
-@media (max-width: 960px) {
+@media (max-width: 1140px) {
   .nav-toggle { display: inline-flex; }
   .site-nav {
     position: fixed; inset: var(--header-h) 0 auto 0;
