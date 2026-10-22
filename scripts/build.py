@@ -92,6 +92,8 @@ def load_products():
             if photo.suffix.lower() not in PHOTO_EXTS:
                 fail("%s: use one of %s" % (photo.relative_to(ROOT), ", ".join(PHOTO_EXTS)))
             size_kb = photo.stat().st_size // 1024
+            if item.get("fit", "contain") not in ("contain", "cover"):
+                fail('src/products.json: "fit" must be "contain" or "cover" (%s)' % item["file"])
             if size_kb > MAX_PHOTO_KB:
                 print("warning: %s is %d KB – resize to ~800px wide / under 200 KB so pages stay fast"
                       % (photo.relative_to(ROOT), size_kb))
@@ -107,14 +109,16 @@ def gallery_html(category, items):
         vi, en = item["vi"].strip(), (item.get("en") or item["vi"]).strip()
         alt_vi = "%s – %s" % (brand, vi) if brand else vi
         alt_en = "%s – %s" % (brand, en) if brand else en
+        fit = " fit-cover" if item.get("fit") == "cover" else ""
         figures.append(
-            '<figure class="product"><div class="product-img"><img src="/assets/img/products/%s/%s" alt="%s" '
+            '<figure class="product"><div class="product-img%s"><img src="/assets/img/products/%s/%s" alt="%s" '
             'data-en-alt="%s" loading="lazy" decoding="async"></div><figcaption>%s<span data-en="%s">%s</span>'
             '</figcaption></figure>' % (
-                category, html.escape(item["file"], quote=True), html.escape(alt_vi, quote=True),
+                fit, category, html.escape(item["file"], quote=True), html.escape(alt_vi, quote=True),
                 html.escape(alt_en, quote=True), "<strong>%s</strong>" % html.escape(brand) if brand else "",
                 html.escape(en, quote=True), html.escape(vi)))
-    return ('<div class="gallery"><h3 data-i18n="prod.gallery">Sản phẩm mẫu</h3><div class="gallery-grid">%s</div></div>'
+    return ('<div class="gallery"><h3 data-i18n="prod.gallery">Sản phẩm mẫu</h3><div class="gallery-grid">%s</div>'
+            '<p class="gallery-note" data-i18n="prod.gallery.note">Hình ảnh sản phẩm từ website chính thức của các hãng.</p></div>'
             % "".join(figures))
 
 

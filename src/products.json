@@ -1,9 +1,45 @@
 {
-  "_huong_dan": "Ảnh sản phẩm mẫu cho trang /thiet-bi/. Đặt ảnh vào src/assets/img/products/<danh-muc>/ rồi khai báo bên dưới (file, brand, vi, en). Danh mục trống thì trang chỉ hiển thị hình minh họa. Ảnh nên là .webp hoặc .jpg, rộng khoảng 800px, dưới 200 KB, nền trắng. Chỉ dùng ảnh do hãng/nhà phân phối cung cấp cho đại lý hoặc ảnh tự chụp.",
+  "_huong_dan": "Ảnh sản phẩm mẫu cho trang /thiet-bi/. Đặt ảnh vào src/assets/img/products/<danh-muc>/ rồi khai báo bên dưới (file, brand, vi, en). Danh mục trống thì không hiển thị khu vực ảnh. \"fit\": \"cover\" cho ảnh chụp trong không gian thật; \"source\" ghi trang gốc của ảnh. Ảnh nên là .webp hoặc .jpg, rộng khoảng 800px, dưới 200 KB, nền trắng. Chỉ dùng ảnh do hãng/nhà phân phối cung cấp cho đại lý hoặc ảnh tự chụp.",
   "_vi_du": [
-    { "file": "inax-bon-cau-mot-khoi.webp", "brand": "INAX", "vi": "Bồn cầu một khối", "en": "One-piece toilet" }
+    {
+      "file": "inax-bon-cau-mot-khoi.webp",
+      "brand": "INAX",
+      "vi": "Bồn cầu một khối",
+      "en": "One-piece toilet"
+    }
   ],
-  "thiet-bi-ve-sinh": [],
+  "thiet-bi-ve-sinh": [
+    {
+      "file": "viglacera-bon-cau-mot-khoi.webp",
+      "brand": "Viglacera",
+      "vi": "Bồn cầu một khối",
+      "en": "One-piece toilet",
+      "fit": "cover",
+      "source": "https://viglacera.vn/"
+    },
+    {
+      "file": "viglacera-chau-lavabo-duong-ban.webp",
+      "brand": "Viglacera",
+      "vi": "Chậu lavabo dương bàn",
+      "en": "Countertop wash basin",
+      "fit": "cover",
+      "source": "https://viglacera.vn/"
+    },
+    {
+      "file": "enic-bon-cau-trung-e10.webp",
+      "brand": "Enic",
+      "vi": "Bồn cầu trứng E10",
+      "en": "E10 egg-shaped toilet",
+      "source": "https://enic.vn/"
+    },
+    {
+      "file": "enic-sen-cay-tam.webp",
+      "brand": "Enic",
+      "vi": "Sen cây tắm",
+      "en": "Shower column",
+      "source": "https://enic.vn/"
+    }
+  ],
   "bon-nuoc-may-nuoc-nong": [],
   "thiet-bi-dien": [],
   "den-trang-tri": [],

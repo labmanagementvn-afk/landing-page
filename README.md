@@ -30,7 +30,7 @@ src/                    ← mã nguồn – chỉ sửa ở đây
   assets/css/styles.css
   assets/js/main.js     ← chuyển trang, chuyển ngôn ngữ, menu mobile
   assets/js/i18n-en.js  ← toàn bộ bản dịch tiếng Anh
-  assets/img/           ← logo, favicon, ảnh chia sẻ mạng xã hội; brands/ (logo hãng), products/ (ảnh sản phẩm), illustrations/
+  assets/img/           ← logo, favicon, ảnh chia sẻ mạng xã hội; brands/ (logo hãng), products/ (ảnh sản phẩm)
   404.html, robots.txt, site.webmanifest
 scripts/build.py        ← tạo thư mục dist/ (mỗi trang một file HTML + sitemap.xml); chỉ cần Python 3
 dist/                   ← kết quả build, được deploy (không commit)
@@ -106,13 +106,15 @@ Kết nối repo, lệnh build: `python3 scripts/build.py`, thư mục xuất b�
 - **Ngày cập nhật chính sách bảo mật:** tìm `Cập nhật lần cuối` trong `index.html` và `pp.updated` trong `i18n-en.js`.
 - **Màu thương hiệu:** biến CSS ở đầu `src/assets/css/styles.css`.
 - **Tên miền khác `vuonggiaphu.com`:** sửa `site` trong `src/pages.json` và dòng `Sitemap:` trong `src/robots.txt`.
-- **Logo thương hiệu:** đặt file logo vào `src/assets/img/brands/` với tên đúng mã hãng (vd. `inax.svg`, `rang-dong.png` –
-  danh sách trong `src/assets/img/brands/README.md`). Khi build, tên hãng dạng chữ tự được thay bằng logo.
-- **Ảnh sản phẩm mẫu:** đặt ảnh vào `src/assets/img/products/<danh-muc>/` và khai báo trong `src/products.json`
-  (hướng dẫn trong `src/assets/img/products/README.md`). Danh mục chưa có ảnh chỉ hiển thị hình minh họa.
-- **Bản quyền hình ảnh:** chỉ dùng logo và ảnh sản phẩm do hãng/nhà phân phối cung cấp cho đại lý (hoặc ảnh tự chụp),
-  không ghi giá, không giỏ hàng. Nếu là đại lý/nhà phân phối ủy quyền của hãng nào, có thể ghi rõ – chỉ khi có giấy ủy quyền.
-  Các hình minh họa trong `src/assets/img/illustrations/` là hình vẽ riêng của website, dùng tự do.
+- **Logo thương hiệu:** lấy từ website chính thức của từng hãng, nằm trong `src/assets/img/brands/` với tên đúng mã hãng
+  (vd. `inax.webp`, `toto.svg` – danh sách trong `src/assets/img/brands/README.md`). Khi build, tên hãng dạng chữ tự được thay
+  bằng logo; hãng chưa có file logo (hiện là Senko) vẫn hiển thị tên dạng chữ.
+- **Ảnh sản phẩm mẫu:** ảnh thật lấy từ website chính thức của các hãng, nằm trong `src/assets/img/products/<danh-muc>/`
+  và được khai báo trong `src/products.json` (hướng dẫn trong `src/assets/img/products/README.md`; `"fit": "cover"` cho ảnh
+  chụp trong không gian thật, mặc định hiển thị trọn sản phẩm).
+- **Bản quyền hình ảnh:** logo và ảnh sản phẩm là nhãn hiệu/tác phẩm của các hãng, được dùng để giới thiệu sản phẩm mà công ty
+  cung cấp; nên xin xác nhận của hãng hoặc nhà phân phối, và gỡ ngay nếu hãng yêu cầu. Không ghi giá, không giỏ hàng.
+  Nếu là đại lý/nhà phân phối ủy quyền của hãng nào, có thể ghi rõ – chỉ khi có giấy ủy quyền.
 - **Không thu thập thông tin khách hàng:** website không có biểu mẫu nhập liệu, giỏ hàng hay đặt hàng trực tuyến –
   khách liên hệ qua điện thoại, Zalo, email. Nếu sau này thêm form, giỏ hàng hoặc đặt hàng/thanh toán trực tuyến,
   cần cập nhật Chính sách bảo mật và kiểm tra nghĩa vụ thông báo theo Luật Thương mại điện tử 2025 / Nghị định 248/2026/NĐ-CP.
