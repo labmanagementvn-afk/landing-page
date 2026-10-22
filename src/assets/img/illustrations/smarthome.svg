@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img">
+  <defs>
+    <clipPath id="c"><rect width="360" height="240" rx="20"/></clipPath>
+    <linearGradient id="cu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d68a52"/><stop offset="1" stop-color="#a85a00"/></linearGradient>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="360" height="240" fill="#fbefe3"/>
+    <rect y="200" width="360" height="40" fill="#f0dcc6"/>
+    <!-- house -->
+    <path d="M40 112L130 50L220 112" fill="none" stroke="url(#cu)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="58" y="108" width="144" height="92" fill="#fff" stroke="#e2cdb8" stroke-width="2"/>
+    <rect x="76" y="126" width="40" height="34" rx="4" fill="#ffe2ae" stroke="#e2cdb8" stroke-width="2"/>
+    <path d="M96 126v34M76 143h40" stroke="#e2cdb8" stroke-width="2"/>
+    <rect x="140" y="132" width="40" height="68" rx="4" fill="url(#cu)"/>
+    <rect x="168" y="160" width="7" height="14" rx="2" fill="#fff"/>
+    <!-- wifi -->
+    <g fill="none" stroke="#b11f24" stroke-width="5" stroke-linecap="round">
+      <path d="M112 30a26 26 0 0 1 36 0"/><path d="M102 20a40 40 0 0 1 56 0" opacity=".6"/>
+    </g>
+    <circle cx="130" cy="40" r="4" fill="#b11f24"/>
+    <!-- link -->
+    <path d="M206 150C232 150 238 120 252 112" fill="none" stroke="#c4732f" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <!-- phone -->
+    <rect x="254" y="44" width="74" height="146" rx="14" fill="#2b2b2b"/>
+    <rect x="260" y="56" width="62" height="122" rx="8" fill="#fff"/>
+    <g>
+      <rect x="268" y="68" width="46" height="18" rx="9" fill="url(#cu)"/><circle cx="305" cy="77" r="6" fill="#fff"/>
+      <rect x="268" y="94" width="46" height="18" rx="9" fill="#e9e1d8"/><circle cx="277" cy="103" r="6" fill="#fff"/>
+      <rect x="268" y="120" width="46" height="18" rx="9" fill="url(#cu)"/><circle cx="305" cy="129" r="6" fill="#fff"/>
+      <rect x="268" y="148" width="20" height="20" rx="5" fill="#f6ebe0"/><rect x="294" y="148" width="20" height="20" rx="5" fill="#f9e4e4"/>
+    </g>
+  </g>
+</svg>
