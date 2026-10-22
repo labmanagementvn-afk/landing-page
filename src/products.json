@@ -43,5 +43,48 @@
   "bon-nuoc-may-nuoc-nong": [],
   "thiet-bi-dien": [],
   "den-trang-tri": [],
-  "nha-thong-minh": []
+  "nha-thong-minh": [
+    {
+      "file": "aqara-hub-m3.webp",
+      "brand": "Aqara",
+      "vi": "Bộ điều khiển trung tâm Hub M3",
+      "en": "Hub M3",
+      "source": "https://www.aqara.com/en/product/hub-m3/"
+    },
+    {
+      "file": "aqara-cong-tac-z1-pro.webp",
+      "brand": "Aqara",
+      "vi": "Công tắc tường thông minh Z1 Pro",
+      "en": "Smart Wall Switch Z1 Pro",
+      "source": "https://www.aqara.com/en/product/smart-wall-switch-z1-pro-sea/"
+    },
+    {
+      "file": "fpt-smart-home-cong-tac-athena.webp",
+      "brand": "FPT Smart Home",
+      "vi": "Công tắc cảm ứng Athena",
+      "en": "Athena touch switch",
+      "source": "https://fptsmarthome.vn/cong-tac/cong-tac-cam-ung-athena/"
+    },
+    {
+      "file": "fpt-smart-home-dong-co-rem.webp",
+      "brand": "FPT Smart Home",
+      "vi": "Động cơ rèm thông minh",
+      "en": "Smart curtain motor",
+      "source": "https://fptsmarthome.vn/biet-thu/dong-co-rem-thong-minh/"
+    },
+    {
+      "file": "hunonic-cong-tac-cam-ung-wifi.webp",
+      "brand": "Hunonic",
+      "vi": "Công tắc cảm ứng Wi-Fi viền vàng",
+      "en": "Wi-Fi touch switch, gold rim",
+      "source": "https://hunonic.com/san-pham/cong-tac-cam-ung-wifi-chu-nhat-co-vien/"
+    },
+    {
+      "file": "hunonic-khoa-tadolock.webp",
+      "brand": "Hunonic",
+      "vi": "Khóa thông minh TADOLock cửa gỗ",
+      "en": "TADOLock smart lock for wooden doors",
+      "source": "https://hunonic.com/san-pham/khoa-thong-minh-cua-go-den/"
+    }
+  ]
 }
