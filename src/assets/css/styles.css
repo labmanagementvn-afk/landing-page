@@ -296,6 +296,8 @@ html.i18n-pending body { visibility: hidden; }
 
 .brands li.has-logo { display: flex; align-items: center; padding: 8px 16px; }
 .brands li.has-logo img { display: block; height: 28px; width: auto; max-width: 128px; object-fit: contain; }
+/* Square marks need more height to read at the same visual weight as wordmarks */
+.brands li[data-brand="hoa-sen"] img, .brands li[data-brand="tan-a-dai-thanh"] img { height: 40px; margin: -6px 0; }
 
 .gallery { margin: 0 0 28px; }
 .gallery h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--red); margin-bottom: 14px; }

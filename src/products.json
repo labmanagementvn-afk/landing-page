@@ -10,6 +10,20 @@
   ],
   "thiet-bi-ve-sinh": [
     {
+      "file": "toto-bon-cau-washlet-s7.webp",
+      "brand": "TOTO",
+      "vi": "Bồn cầu một khối kèm nắp rửa WASHLET S7",
+      "en": "One-piece toilet with WASHLET S7 bidet seat",
+      "source": "https://vn.toto.com/ms885cdw23/"
+    },
+    {
+      "file": "toto-chau-dat-ban-linear-ceram.webp",
+      "brand": "TOTO",
+      "vi": "Chậu đặt bàn vành mỏng Linear Ceram",
+      "en": "Linear Ceram thin-rim countertop basin",
+      "source": "https://vn.toto.com/lt4715/"
+    },
+    {
       "file": "viglacera-bon-cau-mot-khoi.webp",
       "brand": "Viglacera",
       "vi": "Bồn cầu một khối",
@@ -24,6 +38,20 @@
       "en": "Countertop wash basin",
       "fit": "cover",
       "source": "https://viglacera.vn/"
+    },
+    {
+      "file": "caesar-bon-cau-mot-khoi-cd1374.webp",
+      "brand": "Caesar",
+      "vi": "Bồn cầu một khối CD1374",
+      "en": "CD1374 one-piece toilet",
+      "source": "https://caesar.com.vn/vi/san-pham/chi-tiet/1421/ban-cau-mot-khoi-cd1374"
+    },
+    {
+      "file": "caesar-lavabo-dat-ban-l5215.webp",
+      "brand": "Caesar",
+      "vi": "Lavabo đặt trên bàn L5215",
+      "en": "L5215 countertop basin",
+      "source": "https://caesar.com.vn/vi/san-pham/chi-tiet/57/lavabo-dat-tren-ban-l5215"
     },
     {
       "file": "enic-bon-cau-trung-e10.webp",
