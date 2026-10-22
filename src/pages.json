@@ -1,0 +1,70 @@
+{
+  "site": "https://vuonggiaphu.com",
+  "pages": [
+    {
+      "route": "trang-chu",
+      "path": "/",
+      "name": { "vi": "Trang chủ", "en": "Home" },
+      "title": {
+        "vi": "Vương Gia Phú – Giải pháp Công nghệ & Nội thất tại Đồng Nai",
+        "en": "Vuong Gia Phu Solutions – Technology & Interior Solutions"
+      },
+      "description": {
+        "vi": "Vuong Gia Phu Solutions: phát triển phần mềm, chuyển đổi số, ứng dụng AI; thiết kế, thi công nội thất và cung cấp thiết bị vệ sinh, thiết bị điện, nhà thông minh tại Đồng Nai.",
+        "en": "Software development, digital transformation and applied AI; interior design and fit-out; sanitary ware, electrical and smart-home equipment in Dong Nai, Vietnam."
+      }
+    },
+    {
+      "route": "cong-nghe",
+      "path": "/cong-nghe/",
+      "name": { "vi": "Giải pháp Công nghệ", "en": "Technology Solutions" },
+      "title": {
+        "vi": "Giải pháp Công nghệ: Phần mềm, Chuyển đổi số, AI | Vương Gia Phú",
+        "en": "Technology Solutions: Software, Digital Transformation, AI | Vuong Gia Phu"
+      },
+      "description": {
+        "vi": "Phát triển phần mềm theo yêu cầu, website, ứng dụng di động, ERP/CRM; tư vấn công nghệ, chuyển đổi số và ứng dụng AI cho doanh nghiệp tại Đồng Nai.",
+        "en": "Custom software, websites, mobile apps and ERP/CRM; technology consulting, digital transformation and applied AI for businesses in Dong Nai, Vietnam."
+      }
+    },
+    {
+      "route": "noi-that",
+      "path": "/noi-that/",
+      "name": { "vi": "Giải pháp Nội thất", "en": "Interior Solutions" },
+      "title": {
+        "vi": "Thiết kế & Thi công Nội thất trọn gói tại Đồng Nai | Vương Gia Phú",
+        "en": "Interior Design & Fit-out in Dong Nai | Vuong Gia Phu Solutions"
+      },
+      "description": {
+        "vi": "Thiết kế, thi công nội thất nhà ở, căn hộ, văn phòng; lắp đặt thiết bị phòng tắm, bếp, đèn chiếu sáng, điện mặt trời và nhà thông minh tại Đồng Xoài, Đồng Nai.",
+        "en": "Interior design and fit-out for homes, apartments and offices; installation of bathroom, kitchen, lighting, solar and smart-home equipment in Dong Xoai, Dong Nai."
+      }
+    },
+    {
+      "route": "thiet-bi",
+      "path": "/thiet-bi/",
+      "name": { "vi": "Thiết bị & Thương hiệu", "en": "Products & Brands" },
+      "title": {
+        "vi": "Thiết bị vệ sinh INAX, TOTO, Viglacera, Caesar & Thiết bị điện | Vương Gia Phú",
+        "en": "Sanitary Ware, Solar Water Heaters, Electrical & Smart Home Brands | Vuong Gia Phu"
+      },
+      "description": {
+        "vi": "Thiết bị vệ sinh INAX, TOTO, Viglacera, Caesar, Enic; bồn nước, máy nước nóng năng lượng mặt trời Tân Á Đại Thành, Sơn Hà; thiết bị điện Panasonic, Rạng Đông; nhà thông minh Aqara tại Đồng Nai.",
+        "en": "INAX, TOTO, Viglacera, Caesar and Enic sanitary ware; Tan A Dai Thanh and Son Ha water tanks and solar water heaters; Panasonic and Rang Dong electrical; Aqara smart home in Dong Nai."
+      }
+    },
+    {
+      "route": "chinh-sach-bao-mat",
+      "path": "/chinh-sach-bao-mat/",
+      "name": { "vi": "Chính sách bảo mật", "en": "Privacy Policy" },
+      "title": {
+        "vi": "Chính sách bảo mật | Vương Gia Phú",
+        "en": "Privacy Policy | Vuong Gia Phu Solutions"
+      },
+      "description": {
+        "vi": "Chính sách bảo mật dữ liệu cá nhân của Vuong Gia Phu Solutions Company Limited: dữ liệu thu thập, mục đích, chia sẻ, lưu trữ và quyền của bạn.",
+        "en": "Personal data privacy policy of Vuong Gia Phu Solutions Company Limited: what we collect, why, who we share it with, retention and your rights."
+      }
+    }
+  ]
+}
