@@ -40,9 +40,82 @@
       "source": "https://enic.vn/"
     }
   ],
-  "bon-nuoc-may-nuoc-nong": [],
-  "thiet-bi-dien": [],
-  "den-trang-tri": [],
+  "bon-nuoc-may-nuoc-nong": [
+    {
+      "file": "tan-a-dai-thanh-bon-inox.webp",
+      "brand": "Tân Á Đại Thành",
+      "vi": "Bồn nước inox Tân Á Đại Thành",
+      "en": "Stainless steel water tank",
+      "source": "https://tanadaithanh.vn/kim-khi-gia-dung/san-pham/bon-inox-tan-a-dai-thanh-25-2/"
+    },
+    {
+      "file": "tan-a-dai-thanh-may-nuoc-nong-nlmt.webp",
+      "brand": "Tân Á Đại Thành",
+      "vi": "Máy nước nóng năng lượng mặt trời",
+      "en": "Solar water heater",
+      "source": "https://tanadaithanh.vn/kim-khi-gia-dung/danh-muc/may-nuoc-nong-nang-luong-mat-troi/"
+    },
+    {
+      "file": "son-ha-bon-inox-ngang.webp",
+      "brand": "Sơn Hà",
+      "vi": "Bồn nước inox ngang",
+      "en": "Horizontal stainless steel water tank",
+      "source": "https://www.sonha.com.vn/cach-chong-nong-tec-nuoc-an-toan-hieu-qua-mua-nang-nong/"
+    },
+    {
+      "file": "hoa-sen-ong-nhua-pvc-u.webp",
+      "brand": "Hoa Sen",
+      "vi": "Ống nhựa cấp nước PVC-U",
+      "en": "PVC-U water supply pipe",
+      "source": "https://www.nhuahoasen.vn/san-pham/ong-nhua-pvc-u/"
+    }
+  ],
+  "thiet-bi-dien": [
+    {
+      "file": "sino-o-cam-s9u2.webp",
+      "brand": "Sino",
+      "vi": "Ổ cắm đôi S9U2",
+      "en": "S9U2 double socket",
+      "source": "https://sino.com.vn/o-cam-s9u2-1-1-1417582.html"
+    },
+    {
+      "file": "sino-aptomat-ps45n.webp",
+      "brand": "Sino",
+      "vi": "Aptomat PS45N 2 cực",
+      "en": "PS45N 2-pole circuit breaker",
+      "source": "https://sino.com.vn/ps45n-2-cuc-1-1-1437970.html"
+    },
+    {
+      "file": "rang-dong-den-led-am-tran-at10.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn LED âm trần Downlight AT10",
+      "en": "AT10 LED recessed downlight",
+      "source": "https://rangdong.com.vn/den-led-am-tran-downlight-at10-90-8w-6500k-vien-bac-pr2988.html"
+    },
+    {
+      "file": "rang-dong-bong-led-bulb-a55.webp",
+      "brand": "Rạng Đông",
+      "vi": "Bóng đèn LED bulb A55",
+      "en": "A55 LED bulb",
+      "source": "https://rangdong.com.vn/bong-den-led-bulb-tron-a55n4-5w-pr1069.html"
+    }
+  ],
+  "den-trang-tri": [
+    {
+      "file": "rang-dong-den-op-tran-ln12.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn LED ốp trần tròn LN12",
+      "en": "LN12 round LED ceiling light",
+      "source": "https://rangdong.com.vn/den-led-op-tran-tron-ln12-de-nhom-220-22w-pr1912.html"
+    },
+    {
+      "file": "rang-dong-den-ban-rl38.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn bàn bảo vệ thị lực RL38",
+      "en": "RL38 eye-care desk lamp",
+      "source": "https://rangdong.com.vn/den-ban-bao-ve-thi-luc-rl38-6w-pr1680.html"
+    }
+  ],
   "nha-thong-minh": [
     {
       "file": "aqara-hub-m3.webp",
