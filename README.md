@@ -10,6 +10,7 @@ không thu thập thông tin khách hàng.
 | Giải pháp Nội thất | `/noi-that/` |
 | Thiết bị & Thương hiệu | `/thiet-bi/` |
 | Chính sách bảo mật | `/chinh-sach-bao-mat/` |
+| Trang riêng từng thương hiệu (15 trang) | `/thuong-hieu/inax/`, `/thuong-hieu/toto/`, … |
 | Liên hệ (có trên mọi trang) | `#lien-he` |
 
 **Chuẩn SEO:** mỗi trang là một file HTML riêng với tiêu đề, mô tả, URL chuẩn (canonical), hreflang VI/EN,
@@ -88,11 +89,17 @@ Kết nối repo, lệnh build: `python3 scripts/build.py`, thư mục xuất b�
 - Bật **Enforce HTTPS** (GitHub → Settings → Pages) – Google ưu tiên trang HTTPS.
 - Đăng ký trang với **Google Search Console** (xác minh tên miền), gửi `https://vuonggiaphu.com/sitemap.xml`.
 - Tạo/cập nhật **Google Business Profile** với cùng tên, địa chỉ, số điện thoại như trên website.
+  Đây là yếu tố quan trọng nhất để xuất hiện khi khách tìm "… Đồng Xoài" hoặc "… gần đây"; chọn đúng danh mục
+  (vd. cửa hàng thiết bị vệ sinh, cửa hàng thiết bị điện), thêm ảnh cửa hàng, giờ mở cửa và link website.
+- Trong Search Console, dùng **Kiểm tra URL → Yêu cầu lập chỉ mục** cho trang chủ, `/thiet-bi/` và các trang `/thuong-hieu/…`.
 
 ## Chỉnh sửa nội dung thường gặp
 
 - **Văn bản, dịch vụ, thương hiệu, chính sách bảo mật:** sửa trong `src/index.html`
   (mỗi trang là một khối `<!-- view:… -->`, ví dụ trang Thiết bị & Thương hiệu là `view:thiet-bi`).
+- **Trang thương hiệu (SEO địa phương):** mỗi hãng trong `src/brands.json` có một trang riêng `/thuong-hieu/<mã-hãng>/`
+  với tiêu đề, H1, mô tả dạng "Thiết bị vệ sinh INAX tại Đồng Xoài", giới thiệu, sản phẩm, ảnh, câu hỏi thường gặp.
+  Sửa nội dung VI/EN trong `src/brands.json`; thêm hãng mới = thêm một mục (và logo, ảnh nếu có).
 - **Tiêu đề và mô tả hiển thị trên Google:** sửa trong `src/pages.json` (nên giữ tiêu đề dưới ~65 ký tự, mô tả ~150–160 ký tự).
 - **Thêm trang mới:** thêm một khối `<!-- view:ten-trang -->…<!-- /view:ten-trang -->` vào `src/index.html`
   (thẻ `<section class="view" data-view="ten-trang" … hidden>`, đúng một thẻ `<h1>`), thêm trang vào `src/pages.json`

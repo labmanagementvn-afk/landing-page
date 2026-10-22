@@ -4,9 +4,12 @@
     {
       "route": "trang-chu",
       "path": "/",
-      "name": { "vi": "Trang chủ", "en": "Home" },
+      "name": {
+        "vi": "Trang chủ",
+        "en": "Home"
+      },
       "title": {
-        "vi": "Vương Gia Phú – Giải pháp Công nghệ & Nội thất tại Đồng Nai",
+        "vi": "Vương Gia Phú – Công nghệ & Nội thất tại Đồng Xoài, Đồng Nai",
         "en": "Vuong Gia Phu Solutions – Technology & Interior Solutions"
       },
       "description": {
@@ -17,7 +20,10 @@
     {
       "route": "cong-nghe",
       "path": "/cong-nghe/",
-      "name": { "vi": "Giải pháp Công nghệ", "en": "Technology Solutions" },
+      "name": {
+        "vi": "Giải pháp Công nghệ",
+        "en": "Technology Solutions"
+      },
       "title": {
         "vi": "Giải pháp Công nghệ: Phần mềm, Chuyển đổi số, AI | Vương Gia Phú",
         "en": "Technology Solutions: Software, Digital Transformation, AI | Vuong Gia Phu"
@@ -30,9 +36,12 @@
     {
       "route": "noi-that",
       "path": "/noi-that/",
-      "name": { "vi": "Giải pháp Nội thất", "en": "Interior Solutions" },
+      "name": {
+        "vi": "Giải pháp Nội thất",
+        "en": "Interior Solutions"
+      },
       "title": {
-        "vi": "Thiết kế & Thi công Nội thất trọn gói tại Đồng Nai | Vương Gia Phú",
+        "vi": "Thiết kế, thi công nội thất tại Đồng Xoài, Đồng Nai | Vương Gia Phú",
         "en": "Interior Design & Fit-out in Dong Nai | Vuong Gia Phu Solutions"
       },
       "description": {
@@ -43,20 +52,26 @@
     {
       "route": "thiet-bi",
       "path": "/thiet-bi/",
-      "name": { "vi": "Thiết bị & Thương hiệu", "en": "Products & Brands" },
+      "name": {
+        "vi": "Thiết bị & Thương hiệu",
+        "en": "Products & Brands"
+      },
       "title": {
-        "vi": "Thiết bị vệ sinh INAX, TOTO, Viglacera, Caesar & Thiết bị điện | Vương Gia Phú",
+        "vi": "Thiết bị vệ sinh, thiết bị điện tại Đồng Xoài | Vương Gia Phú",
         "en": "Sanitary Ware, Solar Water Heaters, Electrical & Smart Home Brands | Vuong Gia Phu"
       },
       "description": {
-        "vi": "Thiết bị vệ sinh INAX, TOTO, Viglacera, Caesar, Enic; bồn nước, máy nước nóng năng lượng mặt trời Tân Á Đại Thành, Sơn Hà; thiết bị điện Panasonic, Rạng Đông; nhà thông minh Aqara tại Đồng Nai.",
+        "vi": "Thiết bị vệ sinh INAX, TOTO, Viglacera, Caesar, Enic; bồn nước, máy nước nóng năng lượng mặt trời Tân Á Đại Thành, Sơn Hà; thiết bị điện Panasonic, Rạng Đông, Sino; nhà thông minh tại Đồng Xoài, Đồng Nai.",
         "en": "INAX, TOTO, Viglacera, Caesar and Enic sanitary ware; Tan A Dai Thanh and Son Ha water tanks and solar water heaters; Panasonic and Rang Dong electrical; Aqara smart home in Dong Nai."
       }
     },
     {
       "route": "chinh-sach-bao-mat",
       "path": "/chinh-sach-bao-mat/",
-      "name": { "vi": "Chính sách bảo mật", "en": "Privacy Policy" },
+      "name": {
+        "vi": "Chính sách bảo mật",
+        "en": "Privacy Policy"
+      },
       "title": {
         "vi": "Chính sách bảo mật | Vương Gia Phú",
         "en": "Privacy Policy | Vuong Gia Phu Solutions"

@@ -1,0 +1,230 @@
+{
+  "_huong_dan": "Mỗi thương hiệu có một trang riêng /thuong-hieu/<slug>/ do scripts/build.py tạo ra. 'category' là danh mục trên trang Thiết bị (ảnh sản phẩm lấy từ products.json theo tên hãng). Sửa nội dung VI/EN tại đây.",
+  "brands": [
+    {
+      "slug": "inax", "name": "INAX", "category": "thiet-bi-ve-sinh",
+      "kind": { "vi": "thiết bị vệ sinh", "en": "sanitary ware" },
+      "title": { "vi": "Thiết bị vệ sinh INAX tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "INAX Sanitary Ware in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị vệ sinh INAX tại Đồng Xoài", "en": "INAX sanitary ware in Dong Xoai" },
+      "description": { "vi": "Tư vấn, cung cấp và lắp đặt thiết bị vệ sinh, thiết bị phòng tắm INAX tại Đồng Xoài, Đồng Nai: bồn cầu, lavabo, sen vòi, bồn tiểu, nắp rửa điện tử. Gọi/Zalo 0963.345.099.", "en": "Advice, supply and installation of INAX sanitary ware in Dong Xoai, Dong Nai: toilets, basins, showers and taps, urinals, bidet seats. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["INAX là thương hiệu thiết bị vệ sinh Nhật Bản thuộc tập đoàn LIXIL, có mặt tại Việt Nam từ năm 1996 và quen thuộc với nhiều gia đình Việt nhờ thiết kế gọn gàng, bền đẹp, dễ vệ sinh. Men sứ AquaCeramic hạn chế bám bẩn, giúp bồn cầu và lavabo luôn sáng bóng.", "Vương Gia Phú tư vấn chọn bồn cầu, lavabo, sen vòi INAX phù hợp diện tích phòng tắm, phong cách và nhu cầu sử dụng, sau đó lắp đặt hoàn thiện cho nhà ở, căn hộ và công trình tại Đồng Xoài và các khu vực trong tỉnh Đồng Nai."],
+        "en": ["INAX is a Japanese sanitary ware brand owned by LIXIL. It has been in Vietnam since 1996 and is known for neat, durable, easy-to-clean designs; its AquaCeramic glaze resists dirt so toilets and basins stay bright.", "Vuong Gia Phu helps you choose INAX toilets, basins, showers and taps that suit your bathroom, style and needs, then installs them in homes, apartments and projects in Dong Xoai and across Dong Nai province."]
+      },
+      "products": {
+        "vi": ["Bồn cầu một khối, hai khối, treo tường", "Nắp rửa điện tử, bồn cầu thông minh", "Chậu rửa lavabo đặt bàn, âm bàn, treo tường", "Sen tắm, sen cây, vòi lavabo, vòi bếp", "Bồn tiểu nam, bồn tắm", "Phụ kiện phòng tắm"],
+        "en": ["One-piece, two-piece and wall-hung toilets", "Electronic bidet seats and smart toilets", "Countertop, undercounter and wall-hung basins", "Showers, shower columns, basin and kitchen taps", "Urinals and bathtubs", "Bathroom accessories"]
+      }
+    },
+    {
+      "slug": "toto", "name": "TOTO", "category": "thiet-bi-ve-sinh",
+      "kind": { "vi": "thiết bị vệ sinh", "en": "sanitary ware" },
+      "title": { "vi": "Thiết bị vệ sinh, phòng tắm TOTO tại Đồng Xoài | Vương Gia Phú", "en": "TOTO Bathroom & Sanitary Ware in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị vệ sinh, thiết bị phòng tắm TOTO tại Đồng Xoài", "en": "TOTO bathroom and sanitary ware in Dong Xoai" },
+      "description": { "vi": "Thiết bị phòng tắm TOTO tại Đồng Xoài, Đồng Nai: bồn cầu, nắp rửa WASHLET, lavabo, sen vòi. Vương Gia Phú tư vấn chọn mẫu và lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "TOTO bathroom fixtures in Dong Xoai, Dong Nai: toilets, WASHLET bidet seats, basins, showers and taps. Vuong Gia Phu advises and installs on site. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["TOTO là thương hiệu thiết bị vệ sinh hàng đầu Nhật Bản, thành lập năm 1917, nổi tiếng với nắp rửa điện tử WASHLET, công nghệ xả Tornado và lớp men CeFiONtect giúp hạn chế bám bẩn.", "Tại Đồng Xoài, Vương Gia Phú tư vấn trọn bộ thiết bị phòng tắm TOTO – từ bồn cầu, lavabo đến sen vòi – đồng bộ về kiểu dáng, phù hợp không gian và ngân sách, cùng dịch vụ lắp đặt hoàn thiện tại công trình."],
+        "en": ["TOTO is a leading Japanese sanitary ware brand founded in 1917, known for its WASHLET electronic bidet seats, Tornado flush technology and CeFiONtect glaze that keeps surfaces clean.", "In Dong Xoai, Vuong Gia Phu advises on complete TOTO bathroom sets – toilets, basins, showers and taps – matched in style to your space and budget, with full on-site installation."]
+      },
+      "products": {
+        "vi": ["Bồn cầu một khối, hai khối, treo tường", "Nắp rửa điện tử WASHLET", "Chậu lavabo đặt bàn, âm bàn, treo tường", "Sen tắm, sen cây, vòi chậu", "Bồn tiểu, bồn tắm", "Phụ kiện phòng tắm"],
+        "en": ["One-piece, two-piece and wall-hung toilets", "WASHLET electronic bidet seats", "Countertop, undercounter and wall-hung basins", "Showers, shower columns and basin taps", "Urinals and bathtubs", "Bathroom accessories"]
+      }
+    },
+    {
+      "slug": "viglacera", "name": "Viglacera", "category": "thiet-bi-ve-sinh",
+      "kind": { "vi": "thiết bị vệ sinh", "en": "sanitary ware" },
+      "title": { "vi": "Thiết bị vệ sinh Viglacera tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Viglacera Sanitary Ware in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị vệ sinh Viglacera tại Đồng Xoài", "en": "Viglacera sanitary ware in Dong Xoai" },
+      "description": { "vi": "Thiết bị vệ sinh Viglacera tại Đồng Xoài, Đồng Nai: bồn cầu một khối, bồn cầu thông minh, chậu lavabo, sen vòi. Tư vấn và lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "Viglacera sanitary ware in Dong Xoai, Dong Nai: one-piece and smart toilets, wash basins, showers and taps. Advice and on-site installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Viglacera là thương hiệu vật liệu xây dựng lâu năm của Việt Nam, có dòng thiết bị vệ sinh đa dạng mẫu mã, giá thành hợp lý, phù hợp từ nhà phố đến công trình quy mô lớn.", "Vương Gia Phú cung cấp và lắp đặt bồn cầu, lavabo, sen vòi Viglacera tại Đồng Xoài và các khu vực trong tỉnh Đồng Nai, tư vấn chọn mẫu theo không gian phòng tắm và nhu cầu sử dụng của gia đình bạn."],
+        "en": ["Viglacera is a long-established Vietnamese building materials brand with a wide range of sanitary ware at reasonable prices, suitable for townhouses through to large projects.", "Vuong Gia Phu supplies and installs Viglacera toilets, basins, showers and taps in Dong Xoai and across Dong Nai province, helping you choose models that fit your bathroom and your family's needs."]
+      },
+      "products": {
+        "vi": ["Bồn cầu một khối, hai khối, treo tường", "Bồn cầu thông minh", "Chậu lavabo đặt bàn, âm bàn, dương bàn, treo tường", "Sen cây, sen tay, vòi lavabo, vòi rửa bát", "Phụ kiện phòng tắm"],
+        "en": ["One-piece, two-piece and wall-hung toilets", "Smart toilets", "Countertop, undercounter, vessel and wall-hung basins", "Shower columns, hand showers, basin and kitchen taps", "Bathroom accessories"]
+      }
+    },
+    {
+      "slug": "caesar", "name": "Caesar", "category": "thiet-bi-ve-sinh",
+      "kind": { "vi": "thiết bị vệ sinh", "en": "sanitary ware" },
+      "title": { "vi": "Thiết bị vệ sinh Caesar tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Caesar Sanitary Ware in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị vệ sinh Caesar tại Đồng Xoài", "en": "Caesar sanitary ware in Dong Xoai" },
+      "description": { "vi": "Thiết bị vệ sinh Caesar tại Đồng Xoài, Đồng Nai: bồn cầu, lavabo, sen vòi, bồn tắm, tủ lavabo. Vương Gia Phú tư vấn và lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "Caesar sanitary ware in Dong Xoai, Dong Nai: toilets, basins, showers and taps, bathtubs, vanity cabinets. Advice and on-site installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Caesar là thương hiệu thiết bị vệ sinh có nguồn gốc Đài Loan, quen thuộc tại Việt Nam với nhiều mẫu bồn cầu, lavabo, sen vòi thiết kế hiện đại, bền bỉ và dễ lựa chọn theo ngân sách.", "Vương Gia Phú giúp bạn chọn thiết bị Caesar phù hợp cho phòng tắm gia đình, nhà hàng, khách sạn hay văn phòng, và lắp đặt hoàn thiện tại Đồng Xoài và các khu vực lân cận."],
+        "en": ["Caesar is a sanitary ware brand from Taiwan, well known in Vietnam for modern, durable toilets, basins, showers and taps across a range of budgets.", "Vuong Gia Phu helps you choose Caesar fixtures for family bathrooms, restaurants, hotels or offices, and installs them in Dong Xoai and nearby areas."]
+      },
+      "products": {
+        "vi": ["Bồn cầu một khối, hai khối", "Lavabo đặt trên bàn, âm bàn, treo tường", "Sen tắm, sen cây, vòi lavabo", "Bồn tắm, tủ lavabo", "Phụ kiện phòng tắm"],
+        "en": ["One-piece and two-piece toilets", "Countertop, undercounter and wall-hung basins", "Showers, shower columns and basin taps", "Bathtubs and vanity cabinets", "Bathroom accessories"]
+      }
+    },
+    {
+      "slug": "enic", "name": "Enic", "category": "thiet-bi-ve-sinh",
+      "kind": { "vi": "thiết bị vệ sinh", "en": "sanitary ware" },
+      "title": { "vi": "Thiết bị vệ sinh Enic tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Enic Sanitary Ware in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị vệ sinh Enic tại Đồng Xoài", "en": "Enic sanitary ware in Dong Xoai" },
+      "description": { "vi": "Thiết bị vệ sinh Enic tại Đồng Xoài, Đồng Nai: bồn cầu thông minh, bồn cầu trứng, lavabo, sen cây, tủ gương phòng tắm. Tư vấn, lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "Enic sanitary ware in Dong Xoai, Dong Nai: smart and egg-shaped toilets, basins, shower columns, mirror cabinets. Advice and on-site installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Enic mang đến nhiều mẫu thiết bị phòng tắm hiện đại: bồn cầu thông minh, bồn cầu dáng trứng, lavabo, sen cây và tủ gương, phù hợp với các không gian phòng tắm trẻ trung, tối giản.", "Vương Gia Phú tư vấn phối bộ thiết bị Enic hài hòa với nội thất, cung cấp và lắp đặt hoàn thiện cho nhà ở và căn hộ tại Đồng Xoài và các khu vực trong tỉnh Đồng Nai."],
+        "en": ["Enic offers modern bathroom products – smart toilets, egg-shaped toilets, basins, shower columns and mirror cabinets – well suited to fresh, minimalist bathrooms.", "Vuong Gia Phu helps you put together Enic sets that match your interior, and supplies and installs them in homes and apartments in Dong Xoai and across Dong Nai province."]
+      },
+      "products": {
+        "vi": ["Bồn cầu thông minh, bồn cầu dáng trứng", "Chậu lavabo, tủ lavabo, tủ gương", "Sen cây tắm, sen âm tường", "Vòi lavabo, vòi xịt, vòi bồn tắm"],
+        "en": ["Smart toilets and egg-shaped toilets", "Basins, vanity units and mirror cabinets", "Shower columns and concealed showers", "Basin taps, bidet sprays and bath taps"]
+      }
+    },
+    {
+      "slug": "tan-a-dai-thanh", "name": "Tân Á Đại Thành", "category": "bon-nuoc-may-nuoc-nong",
+      "kind": { "vi": "bồn nước, máy nước nóng năng lượng mặt trời", "en": "water tanks and solar water heaters" },
+      "title": { "vi": "Bồn nước, máy nước nóng NLMT Tân Á Đại Thành tại Đồng Xoài | Vương Gia Phú", "en": "Tan A Dai Thanh Water Tanks & Solar Heaters in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Bồn nước, máy nước nóng năng lượng mặt trời Tân Á Đại Thành tại Đồng Xoài", "en": "Tan A Dai Thanh water tanks and solar water heaters in Dong Xoai" },
+      "description": { "vi": "Bồn nước inox, bồn nhựa, máy nước nóng năng lượng mặt trời Tân Á Đại Thành tại Đồng Xoài, Đồng Nai. Khảo sát, tư vấn dung tích và lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "Tan A Dai Thanh stainless and plastic water tanks and solar water heaters in Dong Xoai, Dong Nai. Survey, capacity advice and installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Tân Á Đại Thành là thương hiệu Việt Nam quen thuộc với bồn nước inox, bồn nhựa và máy nước nóng năng lượng mặt trời, được nhiều gia đình tin dùng nhờ độ bền và mạng lưới bảo hành rộng.", "Vương Gia Phú khảo sát mái nhà, tư vấn dung tích bồn và máy nước nóng theo số người sử dụng, lắp đặt chân đỡ, đường ống chắc chắn, thẩm mỹ cho nhà ở, nhà trọ và khách sạn tại Đồng Xoài."],
+        "en": ["Tan A Dai Thanh is a familiar Vietnamese brand of stainless steel and plastic water tanks and solar water heaters, trusted by many families for durability and a wide warranty network.", "Vuong Gia Phu surveys your roof, recommends tank and heater capacity for the number of users, and installs stands and pipework securely and neatly for homes, guesthouses and hotels in Dong Xoai."]
+      },
+      "products": {
+        "vi": ["Bồn nước inox đứng, bồn nước inox ngang", "Bồn nhựa", "Máy nước nóng năng lượng mặt trời", "Chân đỡ, phụ kiện lắp đặt"],
+        "en": ["Vertical and horizontal stainless steel water tanks", "Plastic water tanks", "Solar water heaters", "Stands and installation accessories"]
+      }
+    },
+    {
+      "slug": "son-ha", "name": "Sơn Hà", "category": "bon-nuoc-may-nuoc-nong",
+      "kind": { "vi": "bồn nước, máy nước nóng năng lượng mặt trời", "en": "water tanks and solar water heaters" },
+      "title": { "vi": "Bồn nước inox, máy nước nóng NLMT Sơn Hà tại Đồng Xoài | Vương Gia Phú", "en": "Son Ha Water Tanks & Solar Water Heaters in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Bồn nước inox, máy nước nóng năng lượng mặt trời Sơn Hà tại Đồng Xoài", "en": "Son Ha stainless water tanks and solar water heaters in Dong Xoai" },
+      "description": { "vi": "Bồn nước inox Sơn Hà, thái dương năng (máy nước nóng năng lượng mặt trời) Sơn Hà tại Đồng Xoài, Đồng Nai. Tư vấn dung tích, lắp đặt tận nơi. Gọi/Zalo 0963.345.099.", "en": "Son Ha stainless water tanks and solar water heaters in Dong Xoai, Dong Nai. Capacity advice and on-site installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Sơn Hà là tập đoàn Việt Nam nổi tiếng với bồn nước inox và máy nước nóng năng lượng mặt trời (thái dương năng), phù hợp khí hậu nắng nhiều của Đồng Xoài, giúp tiết kiệm đáng kể chi phí điện đun nước.", "Vương Gia Phú tư vấn chọn bồn nước, máy nước nóng Sơn Hà theo nhu cầu sử dụng và kết cấu mái, lắp đặt chắc chắn, kiểm tra rò rỉ và hướng dẫn sử dụng, bảo dưỡng."],
+        "en": ["Son Ha is a well-known Vietnamese group making stainless water tanks and solar water heaters, well suited to sunny Dong Xoai and a big saving on electricity for hot water.", "Vuong Gia Phu helps you choose Son Ha tanks and heaters for your usage and roof structure, installs them securely, checks for leaks and explains use and maintenance."]
+      },
+      "products": {
+        "vi": ["Bồn nước inox đứng, ngang", "Máy nước nóng năng lượng mặt trời (thái dương năng)", "Phụ kiện, chân đỡ, đường ống", "Vệ sinh, bảo dưỡng bồn và máy nước nóng"],
+        "en": ["Vertical and horizontal stainless steel tanks", "Solar water heaters", "Accessories, stands and pipework", "Cleaning and maintenance of tanks and heaters"]
+      }
+    },
+    {
+      "slug": "hoa-sen", "name": "Hoa Sen", "category": "bon-nuoc-may-nuoc-nong",
+      "kind": { "vi": "ống nhựa cấp thoát nước", "en": "plastic water pipes" },
+      "title": { "vi": "Ống nhựa cấp thoát nước Hoa Sen tại Đồng Xoài | Vương Gia Phú", "en": "Hoa Sen Plastic Water Pipes in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Ống nhựa cấp thoát nước Hoa Sen tại Đồng Xoài", "en": "Hoa Sen plastic water pipes in Dong Xoai" },
+      "description": { "vi": "Ống nhựa Hoa Sen PVC-U, PP-R, HDPE và phụ kiện cấp thoát nước tại Đồng Xoài, Đồng Nai. Cung cấp và thi công đường ống cho nhà ở, công trình. Gọi/Zalo 0963.345.099.", "en": "Hoa Sen PVC-U, PP-R and HDPE pipes and fittings in Dong Xoai, Dong Nai. Supply and installation of water pipework for homes and projects. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Nhựa Hoa Sen thuộc Tập đoàn Hoa Sen, sản xuất ống nhựa PVC-U, PP-R, HDPE và phụ kiện dùng cho hệ thống cấp thoát nước, luồn dây điện trong nhà ở và công trình.", "Vương Gia Phú cung cấp ống và phụ kiện Hoa Sen, thi công đường ống cấp nước nóng – lạnh, kết nối bồn nước và máy nước nóng năng lượng mặt trời cho công trình tại Đồng Xoài."],
+        "en": ["Hoa Sen Plastics, part of Hoa Sen Group, makes PVC-U, PP-R and HDPE pipes and fittings for water supply, drainage and cable conduit in homes and projects.", "Vuong Gia Phu supplies Hoa Sen pipes and fittings and installs hot and cold water pipework, connecting water tanks and solar water heaters for projects in Dong Xoai."]
+      },
+      "products": {
+        "vi": ["Ống nhựa PVC-U cấp thoát nước", "Ống PP-R cấp nước nóng – lạnh", "Ống HDPE", "Ống luồn dây điện", "Phụ kiện, van"],
+        "en": ["PVC-U water supply and drainage pipes", "PP-R hot and cold water pipes", "HDPE pipes", "Electrical conduit", "Fittings and valves"]
+      }
+    },
+    {
+      "slug": "panasonic", "name": "Panasonic", "category": "thiet-bi-dien",
+      "kind": { "vi": "thiết bị điện", "en": "electrical equipment" },
+      "title": { "vi": "Thiết bị điện Panasonic tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Panasonic Electrical Equipment in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị điện Panasonic tại Đồng Xoài", "en": "Panasonic electrical equipment in Dong Xoai" },
+      "description": { "vi": "Công tắc, ổ cắm, thiết bị điện, quạt Panasonic tại Đồng Xoài, Đồng Nai. Tư vấn và thi công hệ thống điện cho nhà ở, văn phòng. Gọi/Zalo 0963.345.099.", "en": "Panasonic switches, sockets, electrical equipment and fans in Dong Xoai, Dong Nai. Advice and electrical installation for homes and offices. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Panasonic là thương hiệu Nhật Bản uy tín về thiết bị điện dân dụng: công tắc, ổ cắm, thiết bị bảo vệ mạch điện, quạt và nhiều thiết bị gia dụng, nổi bật về độ an toàn và độ bền.", "Vương Gia Phú cung cấp và thi công thiết bị điện Panasonic cho nhà ở, văn phòng, cửa hàng tại Đồng Xoài – đi dây gọn gàng, đúng kỹ thuật, đồng bộ mặt công tắc ổ cắm theo phong cách nội thất."],
+        "en": ["Panasonic is a trusted Japanese brand of household electrical equipment – switches, sockets, circuit protection, fans and many appliances – known for safety and durability.", "Vuong Gia Phu supplies and installs Panasonic electrical equipment for homes, offices and shops in Dong Xoai, with tidy, properly done wiring and switch plates matched to your interior."]
+      },
+      "products": {
+        "vi": ["Công tắc, ổ cắm, mặt che", "Thiết bị bảo vệ mạch điện", "Quạt trần, quạt hút", "Thiết bị điện gia dụng"],
+        "en": ["Switches, sockets and wall plates", "Circuit protection devices", "Ceiling and exhaust fans", "Household electrical appliances"]
+      }
+    },
+    {
+      "slug": "rang-dong", "name": "Rạng Đông", "category": "thiet-bi-dien",
+      "kind": { "vi": "đèn LED, thiết bị chiếu sáng", "en": "LED lighting" },
+      "title": { "vi": "Đèn LED Rạng Đông tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Rang Dong LED Lighting in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Đèn LED, thiết bị chiếu sáng Rạng Đông tại Đồng Xoài", "en": "Rang Dong LED lighting in Dong Xoai" },
+      "description": { "vi": "Đèn LED Rạng Đông tại Đồng Xoài, Đồng Nai: bóng LED, đèn âm trần downlight, đèn ốp trần, đèn bàn. Tư vấn giải pháp chiếu sáng và lắp đặt. Gọi/Zalo 0963.345.099.", "en": "Rang Dong LED lighting in Dong Xoai, Dong Nai: LED bulbs, downlights, ceiling lights, desk lamps. Lighting design advice and installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Rạng Đông là nhà sản xuất bóng đèn, thiết bị chiếu sáng lâu năm của Việt Nam, với dải sản phẩm LED tiết kiệm điện đa dạng: bóng LED, đèn âm trần, đèn ốp trần, đèn bàn bảo vệ thị lực và đèn chiếu sáng công nghiệp.", "Vương Gia Phú tư vấn bố trí ánh sáng hợp lý cho từng không gian – phòng khách, phòng ngủ, văn phòng, nhà xưởng – và lắp đặt đèn Rạng Đông tại Đồng Xoài và các khu vực lân cận."],
+        "en": ["Rang Dong is a long-established Vietnamese maker of lamps and lighting, with a wide energy-saving LED range: bulbs, downlights, ceiling lights, eye-care desk lamps and industrial lighting.", "Vuong Gia Phu plans the right lighting for each space – living rooms, bedrooms, offices, factories – and installs Rang Dong lights in Dong Xoai and nearby areas."]
+      },
+      "products": {
+        "vi": ["Bóng đèn LED bulb, LED tube", "Đèn LED âm trần downlight, panel", "Đèn LED ốp trần", "Đèn bàn bảo vệ thị lực", "Đèn chiếu sáng nhà xưởng, sân vườn"],
+        "en": ["LED bulbs and tubes", "LED downlights and panels", "LED ceiling lights", "Eye-care desk lamps", "Factory and garden lighting"]
+      }
+    },
+    {
+      "slug": "senko", "name": "Senko", "category": "thiet-bi-dien",
+      "kind": { "vi": "quạt điện", "en": "electric fans" },
+      "title": { "vi": "Quạt điện Senko tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Senko Electric Fans in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Quạt điện Senko tại Đồng Xoài", "en": "Senko electric fans in Dong Xoai" },
+      "description": { "vi": "Quạt điện Senko tại Đồng Xoài, Đồng Nai: quạt treo tường, quạt đứng, quạt bàn, quạt hút. Tư vấn chọn quạt và lắp đặt. Gọi/Zalo 0963.345.099.", "en": "Senko electric fans in Dong Xoai, Dong Nai: wall, stand, desk and exhaust fans. Advice and installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Senko là thương hiệu quạt điện Việt Nam quen thuộc với nhiều gia đình, có đủ dòng quạt treo tường, quạt đứng, quạt bàn và quạt hút, vận hành êm, bền bỉ và dễ thay thế linh kiện.", "Vương Gia Phú tư vấn chọn loại quạt phù hợp từng không gian và lắp đặt quạt treo tường, quạt hút thông gió gọn gàng, an toàn cho nhà ở, cửa hàng tại Đồng Xoài."],
+        "en": ["Senko is a familiar Vietnamese fan brand with wall, stand, desk and exhaust fans that run quietly, last long and have easy-to-find spare parts.", "Vuong Gia Phu helps you pick the right fan for each space and installs wall and exhaust fans neatly and safely in homes and shops in Dong Xoai."]
+      },
+      "products": {
+        "vi": ["Quạt treo tường", "Quạt đứng, quạt lửng", "Quạt bàn", "Quạt hút, thông gió"],
+        "en": ["Wall fans", "Stand and mid-height fans", "Desk fans", "Exhaust and ventilation fans"]
+      }
+    },
+    {
+      "slug": "sino", "name": "Sino", "category": "thiet-bi-dien",
+      "kind": { "vi": "thiết bị điện", "en": "electrical equipment" },
+      "title": { "vi": "Thiết bị điện Sino (Vanlock) tại Đồng Xoài | Vương Gia Phú", "en": "Sino (Vanlock) Electrical Equipment in Dong Xoai | Vuong Gia Phu" },
+      "h1": { "vi": "Công tắc, ổ cắm, aptomat Sino tại Đồng Xoài", "en": "Sino switches, sockets and circuit breakers in Dong Xoai" },
+      "description": { "vi": "Thiết bị điện Sino – Vanlock tại Đồng Xoài, Đồng Nai: công tắc, ổ cắm, aptomat (MCB, RCBO), ống luồn dây. Cung cấp và thi công điện. Gọi/Zalo 0963.345.099.", "en": "Sino – Vanlock electrical equipment in Dong Xoai, Dong Nai: switches, sockets, circuit breakers (MCB, RCBO), conduit. Supply and installation. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Sino (Sino – Vanlock) là thương hiệu thiết bị điện phổ biến tại Việt Nam: công tắc, ổ cắm, aptomat, thiết bị chống giật, ống luồn dây điện – mẫu mã đa dạng, dễ lắp đặt và thay thế.", "Vương Gia Phú cung cấp thiết bị điện Sino và thi công hệ thống điện an toàn, đúng kỹ thuật cho nhà ở, văn phòng, cửa hàng tại Đồng Xoài và các khu vực trong tỉnh Đồng Nai."],
+        "en": ["Sino (Sino – Vanlock) is a popular Vietnamese electrical brand: switches, sockets, circuit breakers, earth-leakage protection and conduit – in many styles and easy to install and replace.", "Vuong Gia Phu supplies Sino equipment and installs safe, properly done electrical systems for homes, offices and shops in Dong Xoai and across Dong Nai province."]
+      },
+      "products": {
+        "vi": ["Công tắc, ổ cắm, mặt che", "Aptomat MCB, RCBO, cầu dao chống giật", "Tủ điện, hộp điện", "Ống luồn dây và phụ kiện"],
+        "en": ["Switches, sockets and wall plates", "MCB and RCBO breakers, earth-leakage breakers", "Distribution boards and boxes", "Conduit and accessories"]
+      }
+    },
+    {
+      "slug": "aqara", "name": "Aqara", "category": "nha-thong-minh",
+      "kind": { "vi": "thiết bị nhà thông minh", "en": "smart home devices" },
+      "title": { "vi": "Nhà thông minh Aqara tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Aqara Smart Home in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị nhà thông minh Aqara tại Đồng Xoài", "en": "Aqara smart home devices in Dong Xoai" },
+      "description": { "vi": "Lắp đặt nhà thông minh Aqara tại Đồng Xoài, Đồng Nai: hub, công tắc thông minh, cảm biến, khóa cửa, rèm tự động; tương thích Apple Home, Google Home. Gọi/Zalo 0963.345.099.", "en": "Aqara smart home installation in Dong Xoai, Dong Nai: hubs, smart switches, sensors, door locks, curtain motors; works with Apple Home and Google Home. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Aqara là hệ sinh thái nhà thông minh với bộ điều khiển trung tâm, công tắc, cảm biến, khóa cửa và động cơ rèm, tương thích Apple Home, Google Home, Amazon Alexa và chuẩn Matter.", "Với thế mạnh công nghệ, Vương Gia Phú thiết kế giải pháp Aqara theo nhu cầu, lắp đặt và cài đặt kịch bản tự động (bật đèn khi có người, đóng rèm buổi tối, cảnh báo rò nước…) cho nhà ở tại Đồng Xoài."],
+        "en": ["Aqara is a smart home ecosystem of hubs, switches, sensors, door locks and curtain motors that works with Apple Home, Google Home, Amazon Alexa and Matter.", "Drawing on our technology expertise, Vuong Gia Phu designs Aqara set-ups around your needs, installs them and configures automations (lights on when someone arrives, curtains closing at night, water-leak alerts…) for homes in Dong Xoai."]
+      },
+      "products": {
+        "vi": ["Bộ điều khiển trung tâm (hub)", "Công tắc tường thông minh", "Cảm biến cửa, chuyển động, rò nước, nhiệt độ", "Khóa cửa thông minh", "Động cơ rèm"],
+        "en": ["Hubs", "Smart wall switches", "Door, motion, water-leak and temperature sensors", "Smart door locks", "Curtain motors"]
+      }
+    },
+    {
+      "slug": "fpt-smart-home", "name": "FPT Smart Home", "category": "nha-thong-minh",
+      "kind": { "vi": "thiết bị nhà thông minh", "en": "smart home devices" },
+      "title": { "vi": "Nhà thông minh FPT Smart Home tại Đồng Xoài | Vương Gia Phú", "en": "FPT Smart Home in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Nhà thông minh FPT Smart Home tại Đồng Xoài", "en": "FPT Smart Home in Dong Xoai" },
+      "description": { "vi": "Giải pháp nhà thông minh FPT Smart Home tại Đồng Xoài, Đồng Nai: công tắc cảm ứng, động cơ rèm, cảm biến, điều khiển qua ứng dụng và giọng nói. Gọi/Zalo 0963.345.099.", "en": "FPT Smart Home solutions in Dong Xoai, Dong Nai: touch switches, curtain motors, sensors, app and voice control. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["FPT Smart Home là giải pháp nhà thông minh của FPT – thương hiệu công nghệ Việt Nam, với công tắc cảm ứng, động cơ rèm, cảm biến và bộ điều khiển, điều khiển qua ứng dụng điện thoại và trợ lý giọng nói tiếng Việt.", "Vương Gia Phú tư vấn, lắp đặt và cài đặt FPT Smart Home cho nhà phố, biệt thự, căn hộ tại Đồng Xoài, kết hợp đồng bộ với hệ thống điện và nội thất."],
+        "en": ["FPT Smart Home is the smart home solution from FPT, the Vietnamese technology company, with touch switches, curtain motors, sensors and controllers, run from a phone app and a Vietnamese voice assistant.", "Vuong Gia Phu advises on, installs and configures FPT Smart Home for townhouses, villas and apartments in Dong Xoai, integrated with the electrical system and interior."]
+      },
+      "products": {
+        "vi": ["Công tắc cảm ứng thông minh", "Động cơ rèm thông minh", "Cảm biến chuyển động, cửa", "Bộ điều khiển trung tâm"],
+        "en": ["Smart touch switches", "Smart curtain motors", "Motion and door sensors", "Central controllers"]
+      }
+    },
+    {
+      "slug": "hunonic", "name": "Hunonic", "category": "nha-thong-minh",
+      "kind": { "vi": "thiết bị nhà thông minh", "en": "smart home devices" },
+      "title": { "vi": "Nhà thông minh Hunonic tại Đồng Xoài, Đồng Nai | Vương Gia Phú", "en": "Hunonic Smart Home in Dong Xoai, Dong Nai | Vuong Gia Phu" },
+      "h1": { "vi": "Thiết bị nhà thông minh Hunonic tại Đồng Xoài", "en": "Hunonic smart home devices in Dong Xoai" },
+      "description": { "vi": "Thiết bị nhà thông minh Hunonic tại Đồng Xoài, Đồng Nai: công tắc cảm ứng Wi-Fi, khóa thông minh, rèm tự động, điều khiển từ xa qua điện thoại. Gọi/Zalo 0963.345.099.", "en": "Hunonic smart home devices in Dong Xoai, Dong Nai: Wi-Fi touch switches, smart locks, automatic curtains, remote control from your phone. Call/Zalo +84 963 345 099." },
+      "intro": {
+        "vi": ["Hunonic là thương hiệu nhà thông minh Việt Nam với công tắc cảm ứng Wi-Fi, khóa cửa thông minh, động cơ rèm và thiết bị điều khiển từ xa, dễ lắp đặt, phù hợp cả nhà đang ở lẫn nhà xây mới.", "Vương Gia Phú lắp đặt thiết bị Hunonic, kết nối ứng dụng và cài đặt hẹn giờ, kịch bản tự động cho gia đình, cửa hàng tại Đồng Xoài và các khu vực lân cận."],
+        "en": ["Hunonic is a Vietnamese smart home brand offering Wi-Fi touch switches, smart door locks, curtain motors and remote controls that are easy to fit in existing homes as well as new builds.", "Vuong Gia Phu installs Hunonic devices, connects the app and sets up schedules and automations for homes and shops in Dong Xoai and nearby areas."]
+      },
+      "products": {
+        "vi": ["Công tắc cảm ứng Wi-Fi", "Khóa cửa thông minh", "Động cơ rèm tự động", "Ổ cắm, bộ điều khiển từ xa"],
+        "en": ["Wi-Fi touch switches", "Smart door locks", "Automatic curtain motors", "Smart plugs and remote controllers"]
+      }
+    }
+  ]
+}

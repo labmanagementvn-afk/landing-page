@@ -122,7 +122,7 @@ window.I18N_EN = {
 
   // Products & brands
   'prod.title': 'Sanitary ware, electrical equipment, <span class="text-grad">solar water heating</span> &amp; <span class="text-grad">smart home</span>',
-  'prod.lead': 'Vuong Gia Phu advises on, supplies and installs equipment from trusted Vietnamese and international brands for homes, apartments, offices and projects in Dong Xoai and across Dong Nai province.',
+  'prod.lead': 'Vuong Gia Phu advises on, supplies and installs equipment from trusted Vietnamese and international brands for homes, apartments, offices and projects in Dong Xoai (formerly Binh Phuoc) and across Dong Nai province.',
   'prod.jump': 'Product categories',
   'prod.types': 'Typical products',
   'prod.brands': 'Brands',

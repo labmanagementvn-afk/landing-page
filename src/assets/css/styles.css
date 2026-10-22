@@ -340,6 +340,25 @@ html.i18n-pending body { visibility: hidden; }
 .faq details p { margin: 0 0 18px; color: var(--ink-soft); }
 .disclaimer { margin: 28px 0 0; font-size: .82rem; color: var(--muted); text-align: center; }
 
+/* ---------- Brand pages ---------- */
+.brand-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: center; }
+.brand-hero .hero-actions { margin-top: 20px; }
+.brand-hero-logo { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px 36px; box-shadow: var(--shadow); }
+.brand-hero-logo img { display: block; height: 72px; width: auto; max-width: 260px; object-fit: contain; }
+.narrow-wide { max-width: 980px; }
+.narrow-wide > h2 { font-size: 1.4rem; margin-top: 2em; }
+.narrow-wide > h2:first-child { margin-top: 0; }
+.narrow-wide > p { color: var(--ink-soft); }
+.checklist-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; margin-bottom: 28px; }
+.narrow-wide > .checklist, .narrow-wide > .faq { margin-bottom: 8px; }
+.narrow-wide > .gallery { margin-top: 28px; }
+.brand-links li { padding: 0; }
+.brands li a { display: flex; align-items: center; color: inherit; padding: 9px 18px; border-radius: 999px; }
+.brands li:has(a) { padding: 0; }
+.brands li.has-logo a { padding: 8px 16px; }
+.brands li a:hover { color: var(--copper-dark); }
+.brands li:has(a):hover { border-color: var(--copper-light); box-shadow: var(--shadow); }
+
 /* ---------- Privacy ---------- */
 .privacy { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; }
 .toc { position: sticky; top: calc(var(--header-h) + 24px); background: var(--bg-alt); border-radius: var(--radius); padding: 20px 22px; font-size: .9rem; }
@@ -416,7 +435,9 @@ a.contact-item:hover { color: var(--ink); border-color: var(--copper-light); box
   .hero-visual img { width: 170px; }
   .hex-bg { width: 250px; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .pillars, .contact-grid, .privacy, .category-body { grid-template-columns: 1fr; }
+  .pillars, .contact-grid, .privacy, .category-body, .brand-hero, .checklist-cols { grid-template-columns: 1fr; }
+  .brand-hero-logo { justify-self: start; order: -1; padding: 16px 22px; }
+  .brand-hero-logo img { height: 48px; }
   .toc { position: static; }
   .footer-inner { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
