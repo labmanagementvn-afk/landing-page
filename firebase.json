@@ -1,7 +1,8 @@
 {
   "hosting": {
-    "public": "public",
-    "cleanUrls": true,
+    "public": "dist",
+    "predeploy": ["python3 scripts/build.py"],
+    "trailingSlash": true,
     "ignore": ["firebase.json", "**/.*"],
     "headers": [
       {
