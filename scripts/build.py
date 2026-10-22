@@ -6,6 +6,10 @@ For each page in src/pages.json this writes dist/<path>/index.html containing on
 view (so every URL has its own content, <title>, description, canonical URL and structured data),
 copies the other files in src/ and generates sitemap.xml. Python 3 standard library only.
 
+Brand logos and product photos are optional and picked up automatically:
+  - src/assets/img/brands/<slug>.svg|png|webp|jpg replaces the text chip <li data-brand="<slug>">.
+  - src/products.json lists photos in src/assets/img/products/<category>/ shown in <div data-gallery="<category>">.
+
     python3 scripts/build.py
 """
 import datetime
@@ -19,7 +23,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-GENERATED = {"index.html", "pages.json", "sitemap.xml"}  # not copied as-is
+GENERATED = {"index.html", "pages.json", "products.json", "sitemap.xml"}  # not copied as-is
+BRANDS_DIR = SRC / "assets" / "img" / "brands"
+PRODUCTS_DIR = SRC / "assets" / "img" / "products"
+LOGO_EXTS = (".svg", ".webp", ".png", ".jpg", ".jpeg")
+PHOTO_EXTS = (".webp", ".jpg", ".jpeg", ".png", ".avif")
+MAX_PHOTO_KB = 400
 
 ORG = {
     "name": "Vuong Gia Phu Solutions Company Limited",
@@ -39,6 +48,83 @@ ORG = {
 
 def fail(msg):
     sys.exit("build failed: " + msg)
+
+
+def text_attr(fragment):
+    """HTML text from the template -> safe attribute value."""
+    return html.escape(html.unescape(fragment), quote=True)
+
+
+def apply_logos(template):
+    logos = {}
+    if BRANDS_DIR.is_dir():
+        for f in sorted(BRANDS_DIR.iterdir()):
+            if f.suffix.lower() in LOGO_EXTS:
+                logos.setdefault(f.stem.lower(), f.name)
+
+    def swap(m):
+        slug, name = m.group(1), m.group(2)
+        if slug not in logos:
+            return m.group(0)
+        return ('<li data-brand="%s" class="has-logo"><img src="/assets/img/brands/%s" alt="%s" title="%s" '
+                'loading="lazy" decoding="async"></li>' % (slug, logos[slug], text_attr(name), text_attr(name)))
+
+    out = re.sub(r'<li data-brand="([a-z0-9-]+)">([^<]+)</li>', swap, template)
+    used = set(re.findall(r'data-brand="([a-z0-9-]+)"', template))
+    for slug in sorted(set(logos) - used):
+        print("warning: logo %s has no matching data-brand=\"%s\" in src/index.html" % (logos[slug], slug))
+    return out
+
+
+def load_products():
+    path = SRC / "products.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    products = {k: v for k, v in data.items() if not k.startswith("_")}
+    for category, items in products.items():
+        for item in items:
+            if not item.get("file") or not item.get("vi"):
+                fail('src/products.json: every photo in "%s" needs "file" and "vi"' % category)
+            photo = PRODUCTS_DIR / category / item["file"]
+            if not photo.is_file():
+                fail("src/products.json: %s not found" % photo.relative_to(ROOT))
+            if photo.suffix.lower() not in PHOTO_EXTS:
+                fail("%s: use one of %s" % (photo.relative_to(ROOT), ", ".join(PHOTO_EXTS)))
+            size_kb = photo.stat().st_size // 1024
+            if size_kb > MAX_PHOTO_KB:
+                print("warning: %s is %d KB – resize to ~800px wide / under 200 KB so pages stay fast"
+                      % (photo.relative_to(ROOT), size_kb))
+    return products
+
+
+def gallery_html(category, items):
+    if not items:
+        return ""
+    figures = []
+    for item in items:
+        brand = item.get("brand", "").strip()
+        vi, en = item["vi"].strip(), (item.get("en") or item["vi"]).strip()
+        alt_vi = "%s – %s" % (brand, vi) if brand else vi
+        alt_en = "%s – %s" % (brand, en) if brand else en
+        figures.append(
+            '<figure class="product"><div class="product-img"><img src="/assets/img/products/%s/%s" alt="%s" '
+            'data-en-alt="%s" loading="lazy" decoding="async"></div><figcaption>%s<span data-en="%s">%s</span>'
+            '</figcaption></figure>' % (
+                category, html.escape(item["file"], quote=True), html.escape(alt_vi, quote=True),
+                html.escape(alt_en, quote=True), "<strong>%s</strong>" % html.escape(brand) if brand else "",
+                html.escape(en, quote=True), html.escape(vi)))
+    return ('<div class="gallery"><h3 data-i18n="prod.gallery">Sản phẩm mẫu</h3><div class="gallery-grid">%s</div></div>'
+            % "".join(figures))
+
+
+def apply_galleries(template, products):
+    slots = set(re.findall(r'<div data-gallery="([a-z0-9-]+)"></div>', template))
+    for category in products:
+        if category not in slots:
+            fail('src/products.json: unknown category "%s" (known: %s)' % (category, ", ".join(sorted(slots))))
+    return re.sub(r'<div data-gallery="([a-z0-9-]+)"></div>',
+                  lambda m: gallery_html(m.group(1), products.get(m.group(1), [])), template)
 
 
 def page_url(site, page):
@@ -131,10 +217,12 @@ def main():
     config = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
     site, pages = config["site"].rstrip("/"), config["pages"]
     template = (SRC / "index.html").read_text(encoding="utf-8")
+    template = apply_galleries(apply_logos(template), load_products())
 
     if DIST.exists():
         shutil.rmtree(DIST)
-    shutil.copytree(SRC, DIST, ignore=lambda d, names: GENERATED if Path(d) == SRC else [])
+    skip = lambda d, names: [n for n in names if n.startswith(".") or n == "README.md" or (Path(d) == SRC and n in GENERATED)]
+    shutil.copytree(SRC, DIST, ignore=skip)
 
     for page in pages:
         if not (page["path"].startswith("/") and page["path"].endswith("/")):

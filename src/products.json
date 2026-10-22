@@ -1,0 +1,11 @@
+{
+  "_huong_dan": "Ảnh sản phẩm mẫu cho trang /thiet-bi/. Đặt ảnh vào src/assets/img/products/<danh-muc>/ rồi khai báo bên dưới (file, brand, vi, en). Danh mục trống thì trang chỉ hiển thị hình minh họa. Ảnh nên là .webp hoặc .jpg, rộng khoảng 800px, dưới 200 KB, nền trắng. Chỉ dùng ảnh do hãng/nhà phân phối cung cấp cho đại lý hoặc ảnh tự chụp.",
+  "_vi_du": [
+    { "file": "inax-bon-cau-mot-khoi.webp", "brand": "INAX", "vi": "Bồn cầu một khối", "en": "One-piece toilet" }
+  ],
+  "thiet-bi-ve-sinh": [],
+  "bon-nuoc-may-nuoc-nong": [],
+  "thiet-bi-dien": [],
+  "den-trang-tri": [],
+  "nha-thong-minh": []
+}

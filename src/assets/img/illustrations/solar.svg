@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img">
+  <defs>
+    <clipPath id="c"><rect width="360" height="240" rx="20"/></clipPath>
+    <linearGradient id="st" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f3f0"/><stop offset=".5" stop-color="#d9d3cc"/><stop offset="1" stop-color="#b9b0a7"/></linearGradient>
+    <linearGradient id="sv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bdb5ad"/><stop offset=".45" stop-color="#f6f3f0"/><stop offset="1" stop-color="#b3aaa1"/></linearGradient>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="360" height="240" fill="#fbefe3"/>
+    <circle cx="58" cy="52" r="20" fill="#f2b46d"/>
+    <path d="M58 18v-8M58 94v-8M24 52h-8M100 52h-8M34 28l-6-6M88 82l-6-6M82 28l6-6M28 82l6-6" stroke="#f2b46d" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0 200L200 128L360 176V240H0Z" fill="#c4732f"/>
+    <path d="M0 200L200 128L360 176" fill="none" stroke="#a85a00" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M40 210L210 150M80 222L230 168M120 236L260 184" stroke="#b5682a" stroke-width="2"/>
+    <!-- solar water heater: tank + evacuated tubes -->
+    <path d="M118 158V138M262 150V112" stroke="#8a8580" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#3f3f48" stroke-width="7" stroke-linecap="round">
+      <path d="M132 92L114 146M146 92L128 146M160 92L142 146M174 92L156 146M188 92L170 146M202 92L184 146M216 92L198 146M230 92L212 146M244 92L226 146"/>
+    </g>
+    <g stroke="#7d7f8f" stroke-width="2" stroke-linecap="round" opacity=".8">
+      <path d="M131 96L117 138M145 96L131 138M159 96L145 138M173 96L159 138M187 96L173 138M201 96L187 138M215 96L201 138M229 96L215 138M243 96L229 138"/>
+    </g>
+    <path d="M108 148H232" stroke="#8a8580" stroke-width="5" stroke-linecap="round"/>
+    <rect x="118" y="64" width="142" height="30" rx="15" fill="url(#st)" stroke="#a49b92" stroke-width="2"/>
+    <!-- stainless tank -->
+    <path d="M300 168v24M324 168v24" stroke="#8a8580" stroke-width="4"/>
+    <rect x="288" y="78" width="48" height="94" rx="12" fill="url(#sv)" stroke="#a49b92" stroke-width="2"/>
+    <path d="M288 108h48M288 140h48" stroke="#a49b92" stroke-width="2"/>
+    <rect x="304" y="70" width="16" height="10" rx="3" fill="#a49b92"/>
+  </g>
+</svg>

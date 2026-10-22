@@ -30,6 +30,7 @@
   var lang = 'vi';
   var originalHtml = new Map();   // element -> Vietnamese innerHTML
   var originalAttrs = new Map();  // element -> { attr: Vietnamese value }
+  var originalText = new Map();   // element -> Vietnamese text or alt (data-en / data-en-alt)
 
   function t(key) {
     return lang === 'en' && EN[key] != null ? EN[key] : VI[key];
@@ -78,6 +79,16 @@
         var value = next === 'en' ? EN[key] : null;
         el.setAttribute(attr, value != null ? value : saved[attr]);
       });
+    });
+
+    // Inline translations: data-en="…" (text) and data-en-alt="…" (image alt), used by generated captions
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      if (!originalText.has(el)) originalText.set(el, el.textContent);
+      el.textContent = next === 'en' ? el.getAttribute('data-en') : originalText.get(el);
+    });
+    document.querySelectorAll('[data-en-alt]').forEach(function (el) {
+      if (!originalText.has(el)) originalText.set(el, el.getAttribute('alt'));
+      el.setAttribute('alt', next === 'en' ? el.getAttribute('data-en-alt') : originalText.get(el));
     });
 
     document.querySelectorAll('[data-set-lang]').forEach(function (btn) {
