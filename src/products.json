@@ -1,11 +1,191 @@
 {
-  "_huong_dan": "Ảnh sản phẩm mẫu cho trang /thiet-bi/. Đặt ảnh vào src/assets/img/products/<danh-muc>/ rồi khai báo bên dưới (file, brand, vi, en). Danh mục trống thì trang chỉ hiển thị hình minh họa. Ảnh nên là .webp hoặc .jpg, rộng khoảng 800px, dưới 200 KB, nền trắng. Chỉ dùng ảnh do hãng/nhà phân phối cung cấp cho đại lý hoặc ảnh tự chụp.",
+  "_huong_dan": "Ảnh sản phẩm mẫu cho trang /thiet-bi/. Đặt ảnh vào src/assets/img/products/<danh-muc>/ rồi khai báo bên dưới (file, brand, vi, en). Danh mục trống thì không hiển thị khu vực ảnh. \"fit\": \"cover\" cho ảnh chụp trong không gian thật; \"source\" ghi trang gốc của ảnh. Ảnh nên là .webp hoặc .jpg, rộng khoảng 800px, dưới 200 KB, nền trắng. Chỉ dùng ảnh do hãng/nhà phân phối cung cấp cho đại lý hoặc ảnh tự chụp.",
   "_vi_du": [
-    { "file": "inax-bon-cau-mot-khoi.webp", "brand": "INAX", "vi": "Bồn cầu một khối", "en": "One-piece toilet" }
+    {
+      "file": "inax-bon-cau-mot-khoi.webp",
+      "brand": "INAX",
+      "vi": "Bồn cầu một khối",
+      "en": "One-piece toilet"
+    }
   ],
-  "thiet-bi-ve-sinh": [],
-  "bon-nuoc-may-nuoc-nong": [],
-  "thiet-bi-dien": [],
-  "den-trang-tri": [],
-  "nha-thong-minh": []
+  "thiet-bi-ve-sinh": [
+    {
+      "file": "toto-bon-cau-washlet-s7.webp",
+      "brand": "TOTO",
+      "vi": "Bồn cầu một khối kèm nắp rửa WASHLET S7",
+      "en": "One-piece toilet with WASHLET S7 bidet seat",
+      "source": "https://vn.toto.com/ms885cdw23/"
+    },
+    {
+      "file": "toto-chau-dat-ban-linear-ceram.webp",
+      "brand": "TOTO",
+      "vi": "Chậu đặt bàn vành mỏng Linear Ceram",
+      "en": "Linear Ceram thin-rim countertop basin",
+      "source": "https://vn.toto.com/lt4715/"
+    },
+    {
+      "file": "viglacera-bon-cau-mot-khoi.webp",
+      "brand": "Viglacera",
+      "vi": "Bồn cầu một khối",
+      "en": "One-piece toilet",
+      "fit": "cover",
+      "source": "https://viglacera.vn/"
+    },
+    {
+      "file": "viglacera-chau-lavabo-duong-ban.webp",
+      "brand": "Viglacera",
+      "vi": "Chậu lavabo dương bàn",
+      "en": "Countertop wash basin",
+      "fit": "cover",
+      "source": "https://viglacera.vn/"
+    },
+    {
+      "file": "caesar-bon-cau-mot-khoi-cd1374.webp",
+      "brand": "Caesar",
+      "vi": "Bồn cầu một khối CD1374",
+      "en": "CD1374 one-piece toilet",
+      "source": "https://caesar.com.vn/vi/san-pham/chi-tiet/1421/ban-cau-mot-khoi-cd1374"
+    },
+    {
+      "file": "caesar-lavabo-dat-ban-l5215.webp",
+      "brand": "Caesar",
+      "vi": "Lavabo đặt trên bàn L5215",
+      "en": "L5215 countertop basin",
+      "source": "https://caesar.com.vn/vi/san-pham/chi-tiet/57/lavabo-dat-tren-ban-l5215"
+    },
+    {
+      "file": "enic-bon-cau-trung-e10.webp",
+      "brand": "Enic",
+      "vi": "Bồn cầu trứng E10",
+      "en": "E10 egg-shaped toilet",
+      "source": "https://enic.vn/"
+    },
+    {
+      "file": "enic-sen-cay-tam.webp",
+      "brand": "Enic",
+      "vi": "Sen cây tắm",
+      "en": "Shower column",
+      "source": "https://enic.vn/"
+    }
+  ],
+  "bon-nuoc-may-nuoc-nong": [
+    {
+      "file": "tan-a-dai-thanh-bon-inox.webp",
+      "brand": "Tân Á Đại Thành",
+      "vi": "Bồn nước inox Tân Á Đại Thành",
+      "en": "Stainless steel water tank",
+      "source": "https://tanadaithanh.vn/kim-khi-gia-dung/san-pham/bon-inox-tan-a-dai-thanh-25-2/"
+    },
+    {
+      "file": "tan-a-dai-thanh-may-nuoc-nong-nlmt.webp",
+      "brand": "Tân Á Đại Thành",
+      "vi": "Máy nước nóng năng lượng mặt trời",
+      "en": "Solar water heater",
+      "source": "https://tanadaithanh.vn/kim-khi-gia-dung/danh-muc/may-nuoc-nong-nang-luong-mat-troi/"
+    },
+    {
+      "file": "son-ha-bon-inox-ngang.webp",
+      "brand": "Sơn Hà",
+      "vi": "Bồn nước inox ngang",
+      "en": "Horizontal stainless steel water tank",
+      "source": "https://www.sonha.com.vn/cach-chong-nong-tec-nuoc-an-toan-hieu-qua-mua-nang-nong/"
+    },
+    {
+      "file": "hoa-sen-ong-nhua-pvc-u.webp",
+      "brand": "Hoa Sen",
+      "vi": "Ống nhựa cấp nước PVC-U",
+      "en": "PVC-U water supply pipe",
+      "source": "https://www.nhuahoasen.vn/san-pham/ong-nhua-pvc-u/"
+    }
+  ],
+  "thiet-bi-dien": [
+    {
+      "file": "sino-o-cam-s9u2.webp",
+      "brand": "Sino",
+      "vi": "Ổ cắm đôi S9U2",
+      "en": "S9U2 double socket",
+      "source": "https://sino.com.vn/o-cam-s9u2-1-1-1417582.html"
+    },
+    {
+      "file": "sino-aptomat-ps45n.webp",
+      "brand": "Sino",
+      "vi": "Aptomat PS45N 2 cực",
+      "en": "PS45N 2-pole circuit breaker",
+      "source": "https://sino.com.vn/ps45n-2-cuc-1-1-1437970.html"
+    },
+    {
+      "file": "rang-dong-den-led-am-tran-at10.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn LED âm trần Downlight AT10",
+      "en": "AT10 LED recessed downlight",
+      "source": "https://rangdong.com.vn/den-led-am-tran-downlight-at10-90-8w-6500k-vien-bac-pr2988.html"
+    },
+    {
+      "file": "rang-dong-bong-led-bulb-a55.webp",
+      "brand": "Rạng Đông",
+      "vi": "Bóng đèn LED bulb A55",
+      "en": "A55 LED bulb",
+      "source": "https://rangdong.com.vn/bong-den-led-bulb-tron-a55n4-5w-pr1069.html"
+    }
+  ],
+  "den-trang-tri": [
+    {
+      "file": "rang-dong-den-op-tran-ln12.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn LED ốp trần tròn LN12",
+      "en": "LN12 round LED ceiling light",
+      "source": "https://rangdong.com.vn/den-led-op-tran-tron-ln12-de-nhom-220-22w-pr1912.html"
+    },
+    {
+      "file": "rang-dong-den-ban-rl38.webp",
+      "brand": "Rạng Đông",
+      "vi": "Đèn bàn bảo vệ thị lực RL38",
+      "en": "RL38 eye-care desk lamp",
+      "source": "https://rangdong.com.vn/den-ban-bao-ve-thi-luc-rl38-6w-pr1680.html"
+    }
+  ],
+  "nha-thong-minh": [
+    {
+      "file": "aqara-hub-m3.webp",
+      "brand": "Aqara",
+      "vi": "Bộ điều khiển trung tâm Hub M3",
+      "en": "Hub M3",
+      "source": "https://www.aqara.com/en/product/hub-m3/"
+    },
+    {
+      "file": "aqara-cong-tac-z1-pro.webp",
+      "brand": "Aqara",
+      "vi": "Công tắc tường thông minh Z1 Pro",
+      "en": "Smart Wall Switch Z1 Pro",
+      "source": "https://www.aqara.com/en/product/smart-wall-switch-z1-pro-sea/"
+    },
+    {
+      "file": "fpt-smart-home-cong-tac-athena.webp",
+      "brand": "FPT Smart Home",
+      "vi": "Công tắc cảm ứng Athena",
+      "en": "Athena touch switch",
+      "source": "https://fptsmarthome.vn/cong-tac/cong-tac-cam-ung-athena/"
+    },
+    {
+      "file": "fpt-smart-home-dong-co-rem.webp",
+      "brand": "FPT Smart Home",
+      "vi": "Động cơ rèm thông minh",
+      "en": "Smart curtain motor",
+      "source": "https://fptsmarthome.vn/biet-thu/dong-co-rem-thong-minh/"
+    },
+    {
+      "file": "hunonic-cong-tac-cam-ung-wifi.webp",
+      "brand": "Hunonic",
+      "vi": "Công tắc cảm ứng Wi-Fi viền vàng",
+      "en": "Wi-Fi touch switch, gold rim",
+      "source": "https://hunonic.com/san-pham/cong-tac-cam-ung-wifi-chu-nhat-co-vien/"
+    },
+    {
+      "file": "hunonic-khoa-tadolock.webp",
+      "brand": "Hunonic",
+      "vi": "Khóa thông minh TADOLock cửa gỗ",
+      "en": "TADOLock smart lock for wooden doors",
+      "source": "https://hunonic.com/san-pham/khoa-thong-minh-cua-go-den/"
+    }
+  ]
 }

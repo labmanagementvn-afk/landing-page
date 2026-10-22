@@ -168,8 +168,9 @@
     document.querySelectorAll('[data-view]').forEach(function (v) {
       v.hidden = v.getAttribute('data-view') !== route;
     });
+    var nav = (byRoute[route] && byRoute[route].nav) || route;  // brand pages highlight "Thiết bị & Thương hiệu"
     document.querySelectorAll('[data-route]').forEach(function (a) {
-      var active = a.getAttribute('data-route') === route;
+      var active = a.getAttribute('data-route') === nav;
       a.classList.toggle('active', active);
       if (active) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
